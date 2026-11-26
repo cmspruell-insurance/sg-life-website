@@ -285,6 +285,16 @@
       .review p { margin: 0; color: var(--ink-soft); max-width: 56ch; }
       .review .btn { margin-left: auto; }
 
+      /* Protected Families wall */
+      .pf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 34px; }
+      .pf-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: var(--radius); padding: 26px 26px 22px; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+      .pf-card .pf-stars { color: var(--gold); font-size: 1.05rem; letter-spacing: 3px; }
+      .pf-card blockquote { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: 1.18rem; line-height: 1.45; }
+      .pf-card blockquote p { margin: 0; }
+      .pf-card figcaption { margin-top: auto; font-size: 0.92rem; font-weight: 600; color: var(--ink-soft); }
+      .pf-note { margin-top: 26px; color: var(--ink-soft); }
+      @media (max-width: 760px) { .pf-grid { grid-template-columns: 1fr; } }
+
       /* Contact */
       .contact { background: var(--navy-deep); color: var(--on-navy); }
       .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; }
@@ -597,6 +607,7 @@ section.block h2::after{margin-left:14px}
         </a>
         <nav aria-label="Page sections">
           <a href="#services">Services</a>
+          <a href="#protected-families">Families</a>
           <a href="#story">My Story</a>
           <a href="https://planner.sglifeinsurance.com">Free Planner</a>
           <a href="#planner">Planner</a>
@@ -737,14 +748,29 @@ section.block h2::after{margin-left:14px}
       </section>
 
       <!-- HOW IT WORKS -->
-      <section class="block" id="reviews-proof" style="padding-top: 10px;">
+      <section class="block" id="protected-families" style="padding-top: 10px;">
         <div class="wrap">
-          <p class="kicker">What Families Say</p>
-          <h2>Rated 5 stars on Google reviews</h2>
-          <blockquote><p>&ldquo;Personable. Knowledgeable. Truly a pleasure to do business with!&rdquo;</p><p>— Michaele, Google review</p></blockquote>
-          <blockquote><p>&ldquo;Chris found exactly the amount of benefits my family needs at the perfect price. Would definitely recommend him!&rdquo;</p><p>— Wayne, Google review</p></blockquote>
-          <blockquote><p>&ldquo;Thank you so much for helping my family! It really means a lot&rdquo;</p><p>— Samara, Google review</p></blockquote>
-          <p><a href="https://reviews.sglifeinsurance.com">Read more reviews — or leave one →</a></p>
+          <p class="kicker">Protected Families</p>
+          <h2>Protected Families</h2>
+          <p class="lede">These are real families who put a plan in place — in their own words, from their Google reviews. I'm rated 5 stars on Google reviews, and I don't take that lightly.</p>
+          <div class="pf-grid">
+            <figure class="pf-card">
+              <div class="pf-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote><p>&ldquo;Personable. Knowledgeable. Truly a pleasure to do business with!&rdquo;</p></blockquote>
+              <figcaption>— Michaele, Google review</figcaption>
+            </figure>
+            <figure class="pf-card">
+              <div class="pf-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote><p>&ldquo;Chris found exactly the amount of benefits my family needs at the perfect price. Would definitely recommend him!&rdquo;</p></blockquote>
+              <figcaption>— Wayne, Google review</figcaption>
+            </figure>
+            <figure class="pf-card">
+              <div class="pf-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote><p>&ldquo;Thank you so much for helping my family! It really means a lot&rdquo;</p></blockquote>
+              <figcaption>— Samara, Google review</figcaption>
+            </figure>
+          </div>
+          <p class="pf-note">More families join this wall as they give me the okay — first name and their own words, nothing added. <a href="https://reviews.sglifeinsurance.com">Read more reviews — or leave one →</a></p>
         </div>
       </section>
       <section class="block" id="how">
@@ -878,6 +904,16 @@ section.block h2::after{margin-left:14px}
         </div>
       </section>
 
+      <!-- THE SPRUELL CLAIMS PROMISE -->
+      <section class="block" id="claims-promise">
+        <div class="wrap">
+          <p class="kicker">When the day comes</p>
+          <h2>The Spruell Claims Promise</h2>
+          <p>When the day comes, your family doesn't have to call a 1-800 number and talk to a stranger. They call me first — Christopher M. Spruell, at (702) 347-4536. I know your policy, I know your plan, and I'll walk your family through the claim myself, step by step, until it's filed right. That's the whole point of doing this with a person, not a call center. You set this up so that week would be about family, not paperwork. I intend to keep it that way.</p>
+          <p><a class="btn" href="tel:+17023474536">Call (702) 347-4536</a></p>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section class="block contact" id="contact">
         <div class="wrap contact-grid">
@@ -933,6 +969,7 @@ section.block h2::after{margin-left:14px}
             <a href="tel:+17023474536" target="_blank" rel="noopener">(702) 347-4536</a>
             <a href="https://planner.sglifeinsurance.com" target="_blank" rel="noopener">Free Final Expense Planner</a>
             <a href="shop.html">Memorial Keepsakes</a>
+            <a href="#protected-families">Protected Families</a>
             <a href="https://www.theslsway.com/cspruell" target="_blank" rel="noopener">Join the team — apply</a>
             <a href="https://g.page/r/CY6-3Nt8rdzAEBM/review" target="_blank" rel="noopener">Google reviews</a>
           </div>
