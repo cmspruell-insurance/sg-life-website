@@ -471,6 +471,16 @@ nav.tabbar button.active{color:var(--gold-l);}
       I&rsquo;m a real person in Las Vegas, and I answer my own phone. If we ever talk, you&rsquo;ll talk to me &mdash; not a call center.
     </div>
 
+    <div class="card">
+      <h3 style="font-size:1.2rem; margin-bottom:8px;">Here&rsquo;s how this works</h3>
+      <ol style="margin:0; padding-left:22px;">
+        <li><strong>Start the free plan.</strong> Answer a few simple questions &mdash; it takes about two minutes, and there&rsquo;s nothing to sign up for.</li>
+        <li><strong>See your number.</strong> What a funeral really costs &mdash; for most families, $13,000 &ndash; $18,000 all in &mdash; what you already have, and the gap between the two.</li>
+        <li><strong>Book a free phone call with Christopher.</strong> He goes over your numbers with you and helps you close the gap.</li>
+      </ol>
+      <p class="field-note" style="margin-top:10px;">The plan is free either way. You can finish it start to finish without ever booking a call &mdash; the call is there when you want it.</p>
+    </div>
+
     <p id="resumeNote" class="muted" style="display:none;">Welcome back &mdash; your plan is saved right here on this device, just where you left it.</p>
     <button class="btn btn-primary" id="startBtn">Start my free plan</button>
     <button class="btn btn-ghost" id="continueBtn" style="display:none; margin-top:12px;">Pick up where I left off</button>
@@ -595,6 +605,15 @@ nav.tabbar button.active{color:var(--gold-l);}
       <p style="margin-top:0;">You already have <strong id="doneHave">$0</strong> in place &mdash; so right now, about <strong id="doneGap">$16,800</strong> would come out of your family&rsquo;s pocket in the first week or two.</p>
       <div class="capture-trust">
         <p><strong>This isn&rsquo;t a quote.</strong> That number is a planning estimate, built from what you put into this planner &mdash; it isn&rsquo;t an insurance quote, and it isn&rsquo;t coverage. Prices vary by funeral home, and what a plan would cost you depends on your age and the options you qualify for. The only way to get a real number is a short phone call.</p>
+      </div>
+      <div class="capture-trust" style="border-color:#d9b45f;">
+        <h3 style="font-size:1.2rem; margin:0 0 8px;">Why this call matters</h3>
+        <ul style="margin:0; padding-left:20px; line-height:1.5;">
+          <li>A plan on paper doesn&rsquo;t pay the funeral home &mdash; only coverage actually in place does. The numbers above show the gap; this call is how the gap gets closed.</li>
+          <li>Waiting costs real money. Funeral prices rise every year, and coverage is priced on your age and health today. A change in health can close the door entirely &mdash; the cheapest day to do this is a healthy day.</li>
+          <li>It&rsquo;s free, and it&rsquo;s short. About ten minutes, by phone, no pressure &mdash; I go over your numbers from the plan you just made, not a sales script.</li>
+          <li><strong>Call Christopher First.</strong> When the day comes, your family calls me first, and I walk them through the claim myself, step by step. That promise starts with this call.</li>
+        </ul>
       </div>
       <h3 style="font-size:1.3rem; margin-bottom:8px;">Your one next step</h3>
       <p style="margin-top:0;">A short phone call with me &mdash; about ten minutes &mdash; and I&rsquo;ll check your numbers against real policies, with no pressure either way. Phone only, at a time that suits you.</p>
@@ -1888,6 +1907,7 @@ var stepRenderers = {
       "That&rsquo;s all Christopher ever needs from this planner — and even this stays on your own device. It prints on your plan sheet so you can read it out on the call.");
     html += '<label class="field" for="yourName">Your name</label><input type="text" id="yourName" value="'+esc(S.name)+'" autocomplete="name">';
     html += '<label class="field" for="yourPhone">Your phone number</label><input type="tel" id="yourPhone" value="'+esc(S.phone)+'" autocomplete="tel">';
+    html += '<p class="field-note" style="margin-top:10px;">This call is where your plan becomes protection.</p>';
     html += '<div class="promise">Everything you typed stays on your own phone or computer. Nothing is sent to Christopher or to anyone else. Print your sheet and keep it with your important papers.</div>';
     return html;
   }
