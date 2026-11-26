@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sometimes Tomorrow — Free Final Wishes Planner</title>
+<meta name="description" content="Christopher M. Spruell's free Final Wishes Planner. Make your plan in about two minutes — what a funeral costs, what you already have, and your wishes, all in one place. Everything stays on your own device.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b1c2e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sometimes Tomorrow">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1c2e; --navy2:#10263c; --card:#122a42; --line-navy:#28435e;
+  --cream:#f4f2ec; --paper:#fffdf8; --gold:#c39a3f; --gold-l:#d9b45f; --gold-dark:#9a7a2e;
+  --ink:#16283c; --ink-soft:#43536a; --line:#ddd6c7; --good:#1e6b52;
+  --radius:16px;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html{font-size:19px;}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:"Public Sans", system-ui, -apple-system, sans-serif;
+  line-height:1.5; padding-bottom:96px;
+}
+h1,h2,h3,.serif{font-family:"Newsreader", Georgia, serif; line-height:1.2; margin:0;}
+button{font-family:inherit; cursor:pointer;}
+input,select,textarea{font-family:inherit; font-size:1rem; color:var(--ink);}
+a{color:var(--gold-dark);}
+.wrap{max-width:640px; margin:0 auto; padding:0 18px;}
+
+/* Header */
+header{
+  background:var(--navy); color:#eef2f0; padding:20px 0 18px;
+  border-bottom:4px solid var(--gold);
+}
+header .wrap{display:flex; align-items:center; gap:14px;}
+.mono{
+  flex:0 0 auto; width:54px; height:54px; border:2px solid var(--gold); border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:"Newsreader", Georgia, serif; font-weight:700; font-size:1.35rem; color:var(--cream);
+  background:var(--navy2);
+}
+header h1{font-size:1.45rem; color:var(--cream);}
+header .motto{color:var(--gold-l); font-style:italic; font-family:"Newsreader", Georgia, serif; font-size:1rem; margin-top:2px;}
+.scroll{color:var(--gold); letter-spacing:.35em; font-size:.8rem; text-align:center; margin-top:10px;}
+
+/* Screens */
+.screen{display:none; padding:26px 0 10px;}
+.screen.active{display:block;}
+.kicker{text-transform:uppercase; letter-spacing:.14em; font-size:.78rem; font-weight:700; color:var(--gold-dark); margin:0 0 8px;}
+.lede{font-size:1.12rem; margin:10px 0 18px;}
+.muted{color:var(--ink-soft);}
+.small{font-size:.88rem;}
+.big-number{font-family:"Newsreader", Georgia, serif; font-size:2rem; font-weight:700; color:var(--navy);}
+
+/* Buttons */
+.btn{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  width:100%; min-height:60px; padding:14px 20px; border-radius:14px; border:0;
+  font-size:1.08rem; font-weight:700; text-decoration:none; text-align:center;
+}
+.btn-primary{background:var(--gold); color:var(--navy);}
+.btn-primary:active{background:var(--gold-l);}
+.btn-navy{background:var(--navy); color:var(--cream);}
+.btn-ghost{background:transparent; color:var(--navy); border:2px solid var(--navy);}
+.btn-quiet{background:transparent; color:var(--ink-soft); border:0; font-weight:600; min-height:52px;}
+.btn-row{display:flex; gap:12px; margin-top:22px;}
+.btn-row .btn{flex:1;}
+.btn-row .btn-back{flex:0 0 38%;}
+
+/* Cards */
+.card{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px; margin:16px 0;
+}
+.card-navy{background:var(--navy); color:#eef2f0; border-color:var(--navy);}
+.card-navy h2,.card-navy h3{color:var(--cream);}
+.card-gold{border:2px solid var(--gold);}
+.promise{border-left:5px solid var(--gold); background:var(--paper); padding:16px 18px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:1.02rem;}
+
+/* Choice cards */
+.choice{display:block; width:100%; text-align:left; background:var(--paper); border:2px solid var(--line); border-radius:var(--radius); padding:18px; margin:12px 0; font-size:1.05rem;}
+.choice strong{display:block; font-family:"Newsreader", Georgia, serif; font-size:1.25rem; margin-bottom:4px; color:var(--navy);}
+.choice[aria-pressed="true"]{border-color:var(--gold); background:#fbf6e9; box-shadow:0 0 0 2px var(--gold) inset;}
+.choice .tick{float:right; color:var(--gold-dark); font-weight:700; visibility:hidden;}
+.choice[aria-pressed="true"] .tick{visibility:visible;}
+
+/* Yes/No rows */
+.yn-row{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 0; border-bottom:1px solid var(--line);}
+.yn-row:last-child{border-bottom:0;}
+.yn-row span{flex:1;}
+.yn-btns{display:flex; gap:8px;}
+.yn-btns button{min-width:64px; min-height:50px; border-radius:10px; border:2px solid var(--line); background:var(--paper); font-weight:700; font-size:1rem;}
+.yn-btns button.sel-yes{background:var(--good); border-color:var(--good); color:#fff;}
+.yn-btns button.sel-no{background:var(--navy); border-color:var(--navy); color:#fff;}
+
+/* Fields */
+label.field{display:block; margin:16px 0 6px; font-weight:600;}
+.field-note{font-size:.88rem; color:var(--ink-soft); margin:2px 0 0;}
+input[type="text"],input[type="tel"],input[type="number"],textarea{
+  width:100%; min-height:56px; padding:12px 14px; border:2px solid var(--line); border-radius:12px; background:#fff;
+}
+textarea{min-height:96px; resize:vertical;}
+input:focus,textarea:focus{outline:3px solid var(--gold-l); border-color:var(--gold);}
+.cost-row{display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--line);}
+.cost-row:last-child{border-bottom:0;}
+.cost-row .lbl{flex:1;}
+.cost-row .lbl small{display:block; color:var(--ink-soft); font-size:.82rem;}
+.cost-row input{width:118px; min-height:52px; text-align:right;}
+.total-row{display:flex; justify-content:space-between; align-items:baseline; padding:16px 0 4px; border-top:3px solid var(--gold); margin-top:8px;}
+.total-row .amt{font-family:"Newsreader", Georgia, serif; font-size:1.7rem; font-weight:700; color:var(--navy);}
+
+/* Progress */
+.progress-wrap{position:sticky; top:0; z-index:20; background:var(--cream); padding:12px 0 8px; border-bottom:1px solid var(--line);}
+.progress-meta{display:flex; justify-content:space-between; font-size:.9rem; font-weight:600; color:var(--ink-soft); margin-bottom:6px;}
+.progress{height:12px; background:#e7e1d2; border-radius:99px; overflow:hidden;}
+.progress > div{height:100%; background:var(--gold); border-radius:99px; transition:width .4s ease;}
+
+/* Shop */
+.shop-group{margin:30px 0 6px;}
+.product{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+  padding:18px; margin:14px 0;
+}
+.product h3{font-size:1.22rem; color:var(--navy); margin-bottom:6px;}
+.product p{margin:0 0 12px;}
+.price-line{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:12px;}
+.price{font-family:"Newsreader", Georgia, serif; font-size:1.45rem; font-weight:700; color:var(--navy);}
+.was{color:var(--ink-soft); text-decoration:line-through; font-size:1rem;}
+.save{color:var(--good); font-weight:700; font-size:.92rem;}
+.product .btn{min-height:56px;}
+
+/* Bottom nav */
+nav.tabbar{
+  position:fixed; left:0; right:0; bottom:0; z-index:30;
+  background:var(--navy); border-top:3px solid var(--gold);
+  display:flex; padding-bottom:env(safe-area-inset-bottom);
+}
+nav.tabbar button{
+  flex:1; background:transparent; border:0; color:#b9c6cf; min-height:64px;
+  font-size:.95rem; font-weight:700; padding:8px 4px;
+}
+nav.tabbar button .ic{display:block; font-size:1.3rem; line-height:1.2;}
+nav.tabbar button.active{color:var(--gold-l);}
+
+/* Summary + print */
+.summary-list{margin:0; padding:0; list-style:none;}
+.summary-list li{display:flex; justify-content:space-between; gap:14px; padding:9px 0; border-bottom:1px solid var(--line);}
+.summary-list li:last-child{border-bottom:0;}
+.summary-list .k{color:var(--ink-soft);}
+.summary-list .v{font-weight:600; text-align:right;}
+#printSheet{display:none;}
+@media print{
+  body{padding:0; background:#fff;}
+  header, nav.tabbar, .screen, .no-print{display:none !important;}
+  #printSheet{display:block; color:#000; font-size:12pt;}
+  #printSheet h1{font-size:20pt; margin-bottom:4px;}
+  #printSheet h2{font-size:14pt; margin:18px 0 6px; border-bottom:2px solid #c39a3f; padding-bottom:3px;}
+  #printSheet table{width:100%; border-collapse:collapse;}
+  #printSheet td{padding:5px 4px; border-bottom:1px solid #ccc; vertical-align:top;}
+  #printSheet td.k{color:#444; width:42%;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="mono" aria-hidden="true">ST</div>
+    <div>
+      <h1>Sometimes Tomorrow</h1>
+      <p class="motto">&ldquo;Sometimes tomorrow never comes.&rdquo;</p>
+    </div>
+  </div>
+  <div class="scroll" aria-hidden="true">&#10022; &#10022; &#10022;</div>
+</header>
+
+<!-- ============ HOME ============ -->
+<main class="screen active" id="screen-home">
+  <div class="wrap">
+    <p class="kicker">The Free Final Wishes Planner</p>
+    <h2 class="serif" style="font-size:1.9rem;">Your family&rsquo;s plan, written down in about two minutes.</h2>
+    <p class="lede">I&rsquo;m <strong>Christopher M. Spruell</strong>, a final expense broker here in Las Vegas. I built this planner after my own family learned the hard way what happens when nothing is written down. It&rsquo;s free, it asks for no sign-up, and everything you type stays on your own phone.</p>
+
+    <div class="promise">
+      I&rsquo;m a real person in Las Vegas, and I answer my own phone. If we ever talk, you&rsquo;ll talk to me &mdash; not a call center.
+    </div>
+
+    <p id="resumeNote" class="muted" style="display:none;">Welcome back &mdash; your plan is saved right here on this device, just where you left it.</p>
+    <button class="btn btn-primary" id="startBtn">Start my free plan</button>
+    <button class="btn btn-ghost" id="continueBtn" style="display:none; margin-top:12px;">Pick up where I left off</button>
+
+    <div class="card">
+      <h3 style="font-size:1.2rem; margin-bottom:8px;">What you&rsquo;ll walk away with</h3>
+      <ul style="margin:0; padding-left:22px;">
+        <li>What a funeral actually costs &mdash; your number, not a guess</li>
+        <li>The gap between that cost and what you already have</li>
+        <li>Your wishes and your important papers, written down in one place</li>
+        <li>A one-page plan you can print and keep with your papers</li>
+      </ul>
+      <p class="small muted" style="margin-bottom:0;">&#9733; Rated 5 stars on Google reviews</p>
+    </div>
+
+    <div class="card card-gold">
+      <h3 style="font-size:1.2rem; margin-bottom:6px;">For your family</h3>
+      <p style="margin:0 0 12px;">Doing this for your spouse, or for your mom or dad? The same plan is free for them, too &mdash; send it to them when you&rsquo;re ready.</p>
+      <button class="btn btn-navy shareBtn">Send this planner to family</button>
+    </div>
+
+    <div class="card" id="a2hsCard" style="display:none;">
+      <h3 style="font-size:1.2rem; margin-bottom:6px;">Keep it one tap away</h3>
+      <p style="margin:0 0 12px;">Add Sometimes Tomorrow to your home screen and your plan is always right there. Tap your browser&rsquo;s <strong>Share</strong> or <strong>menu</strong> button, then choose <strong>&ldquo;Add to Home Screen.&rdquo;</strong></p>
+      <button class="btn btn-ghost" id="a2hsDismiss">Got it</button>
+    </div>
+
+    <div class="card">
+      <h3 style="font-size:1.2rem; margin-bottom:6px;">Prefer to just talk it through?</h3>
+      <p style="margin:0 0 12px;">That&rsquo;s fine, too. Call me and we&rsquo;ll do it together, in about ten minutes.</p>
+      <a class="btn btn-navy" href="tel:+17023474536">Call Christopher &mdash; 702-347-4536</a>
+    </div>
+
+    <p class="small muted">Your answers are saved only on this device. Nothing is sent to Christopher or to anyone else unless you choose to call or book a call. You can clear everything any time with &ldquo;Start over&rdquo; at the end of the planner.</p>
+  </div>
+</main>
+
+<!-- ============ PLANNER FLOW ============ -->
+<main class="screen" id="screen-flow">
+  <div class="wrap">
+    <div class="progress-wrap">
+      <div class="progress-meta"><span id="stepLabel">Step 1 of 7</span><span id="stepPct">You&rsquo;re on your way</span></div>
+      <div class="progress"><div id="progressBar" style="width:12%;"></div></div>
+    </div>
+    <div id="stepHost"></div>
+    <div class="btn-row">
+      <button class="btn btn-ghost btn-back" id="backBtn">Back</button>
+      <button class="btn btn-primary" id="nextBtn">Continue</button>
+    </div>
+    <button class="btn btn-quiet" id="quitBtn">Save &amp; finish later</button>
+  </div>
+</main>
+
+<!-- ============ COMPLETION ============ -->
+<main class="screen" id="screen-done">
+  <div class="wrap">
+    <p class="kicker">You did it</p>
+    <h2 class="serif" style="font-size:1.9rem;">Your plan is written down. That&rsquo;s the hard part, done.</h2>
+    <p class="lede">Most families never get this far. Here&rsquo;s your plan on one sheet &mdash; print it and keep it where your family will find it, and tell one person where it is.</p>
+
+    <div class="card card-gold">
+      <h3 style="font-size:1.25rem; margin-bottom:10px;">My Final Wishes &mdash; Plan Summary</h3>
+      <ul class="summary-list" id="summaryList"></ul>
+      <button class="btn btn-navy" id="printBtn" style="margin-top:16px;">Print / Save my plan as PDF</button>
+      <p class="small muted" style="margin-bottom:0;">Printing uses your phone&rsquo;s own print sheet &mdash; choose &ldquo;Save as PDF&rdquo; there if you&rsquo;d rather keep a file.</p>
+    </div>
+
+    <div class="card card-navy">
+      <h3 style="font-size:1.3rem; margin-bottom:8px;">Your one next step</h3>
+      <p style="margin-top:0;">A short phone call with me &mdash; about ten minutes &mdash; and I&rsquo;ll check your numbers against real policies, with no pressure either way. Phone only, at a time that suits you.</p>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call</a>
+      <p class="small" style="color:#b9c6cf; margin-bottom:0;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">702-347-4536</a> &mdash; I answer my own phone.</p>
+    </div>
+
+    <div class="card">
+      <h3 style="font-size:1.25rem; margin-bottom:6px;">Take the next step</h3>
+      <p style="margin-top:0;">Families who want this plan in a keepsake form &mdash; printed, expanded, and made to be handed down &mdash; start here.</p>
+      <div id="doneShelf"></div>
+      <button class="btn btn-ghost" data-goto="shop" style="margin-top:12px;">See the whole shop</button>
+    </div>
+
+    <div class="card card-gold">
+      <h3 style="font-size:1.25rem; margin-bottom:6px;">Now protect one more family: yours</h3>
+      <p style="margin-top:0;">Send this to your spouse or your kids &mdash; theirs is free too, and a plan only works if the whole family has one.</p>
+      <button class="btn btn-primary shareBtn">Send this planner to family</button>
+      <p class="small muted" id="shareNote" style="margin-bottom:0;"></p>
+    </div>
+
+    <button class="btn btn-quiet" id="startOverBtn">Start over (clears everything on this device)</button>
+  </div>
+</main>
+
+<!-- ============ SHOP ============ -->
+<main class="screen" id="screen-shop">
+  <div class="wrap">
+    <p class="kicker">The Sometimes Tomorrow Shop</p>
+    <h2 class="serif" style="font-size:1.9rem;">Made to be kept, not filed away.</h2>
+    <p class="lede">Every piece matches &mdash; navy, gold, and cream &mdash; and every order is read by me personally. The shop itself lives on Etsy: tap any piece to see it there and finish your order on Etsy. Nothing is bought inside this app.</p>
+
+    <div class="promise">
+      MY PROMISE &mdash; I&rsquo;m a real person in Las Vegas, and I read every order myself. If anything arrives wrong, I make it right.
+    </div>
+
+    <div id="shopHost"></div>
+
+    <div class="card">
+      <h3 style="font-size:1.2rem; margin-bottom:6px;">How ordering works</h3>
+      <p style="margin:0;">Tap a piece to open it on Etsy, order there like any Etsy purchase, and I&rsquo;ll take it from there. Downloads arrive instantly; printed pieces are made to order and shipped free in the US.</p>
+    </div>
+  </div>
+</main>
+
+<nav class="tabbar" aria-label="App">
+  <button id="tab-home" class="active"><span class="ic">&#8962;</span>Home</button>
+  <button id="tab-plan"><span class="ic">&#9998;</span>My Plan</button>
+  <button id="tab-shop"><span class="ic">&#10022;</span>Shop</button>
+</nav>
+
+<!-- Print-only sheet -->
+<div id="printSheet"></div>
+<script>
+"use strict";
+/* ================= Data ================= */
+var APP_URL = "https://www.sglifeinsurance.com/app/";
+var BUY_URL = "https://buy.sglifeinsurance.com";
+var BOOK_URL = "https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform";
+var SHARE_TEXT = "I just made my free Final Wishes Plan with Christopher Spruell's Sometimes Tomorrow planner — it took about two minutes, and everything stays private on your own phone. Yours is free too: " + APP_URL;
+
+var PRODUCTS = [
+ /* Planners & Binders */
+ {g:"Planners & Binders", n:"Fillable Final Wishes Planner", d:"The complete final wishes planner as a fillable PDF — funeral plans, accounts, documents, and messages for the people you love, gathered in one place.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4623439683"},
+ {g:"Planners & Binders", n:"Final Wishes Planner — Cream & Gold", d:"The same fillable final wishes planner, shown in the warm Cream & Gold edition — soft ivory with glowing gold, with a keepsake feel.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4624913041"},
+ {g:"Planners & Binders", n:"Final Wishes Planner — Rose Gold Blush", d:"The same fillable final wishes planner, shown in Rose Gold Blush — deep rosewood with rose gold, tender and personal.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4624922632"},
+ {g:"Planners & Binders", n:"Final Wishes Planner — Warm Wood", d:"The same fillable final wishes planner, shown in Warm Wood — rich walnut with golden brass, steady and homey.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4624917259"},
+ {g:"Planners & Binders", n:"In Case of Emergency Binder", d:"The family emergency binder your household reaches for first: key contacts, medical details, where everything is, and what to do in the first 48 hours.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4624928290"},
+ {g:"Planners & Binders", n:"Emergency Wallet Card Set", d:"The part of the plan that leaves the house with you: four credit-card-size cards — emergency contacts, medical notes, where your life insurance lives, and the first calls your family makes — plus a full spare set.", p:"$7.99", w:null, s:null, u:"https://www.etsy.com/listing/4625945559"},
+ {g:"Planners & Binders", n:"Final Wishes Planner — English or Spanish", d:"The complete final wishes planner — choose English or Spanish (Español) on the listing, and your fillable planner arrives in the one language you pick.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4623439683"},
+ /* Planning Kits */
+ {g:"Planning Kits", n:"The Complete Home Bundle", d:"The whole house, written down — emergency binder, household paperwork, and how the home runs, in one fillable set.", p:"$38.99", w:"$59.99", s:"Sale · Save $21.00", u:"https://www.etsy.com/listing/4625043823"},
+ {g:"Planning Kits", n:"Will & Estate Prep Kit", d:"Get ready to make a will or trust: the workbook that gathers everything an attorney will ask — your people, property, and wishes. An organizer, not a legal document.", p:"$19.49", w:"$29.99", s:"Sale · Save $10.50", u:"https://www.etsy.com/listing/4624997024"},
+ {g:"Planning Kits", n:"Family Tree Keepsake Kit", d:"Pedigree charts for seven generations, ancestor story pages, and the interview questions to ask while they're still here to answer.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:"https://www.etsy.com/listing/4624936822"},
+ {g:"Planning Kits", n:"Life Admin Kit", d:"The household paperwork organizer: bills and subscriptions, insurance policies, accounts, renewals, and where every important document lives.", p:"$19.49", w:"$29.99", s:"Sale · Save $10.50", u:"https://www.etsy.com/listing/4624957315"},
+ {g:"Planning Kits", n:"Household Operations Kit", d:"How your house works, written down: shutoffs and systems, cleaning schedules, meal planning, the sitter packet, and the home maintenance calendar.", p:"$16.24", w:"$24.99", s:"Sale · Save $8.75", u:"https://www.etsy.com/listing/4624969294"},
+ /* Memorial & Keepsakes */
+ {g:"Memorial & Keepsakes", n:"Memorial Program Template Bundle", d:"Fillable funeral program, prayer card, register book, and thank-you card templates — personalize them, then print at home or at any copy shop.", p:"$24.99", w:"$33.32", s:"Sale · Save $8.33", u:"https://www.etsy.com/listing/4623623293"},
+ {g:"Memorial & Keepsakes", n:"Printed Memorial Stationery Package", d:"Programs, prayer cards, a register book, and thank-you cards, professionally printed and shipped to you — with a proof for your approval before anything prints.", p:"from $169.00", w:"from $225.33", s:"Sale · Save $56.33", u:"https://www.etsy.com/listing/4623889532"},
+ {g:"Memorial & Keepsakes", n:"Pet Memorial Keepsake Book", d:"A keepsake book for a dog or cat who has gone — their story, your favorite memories, and a letter to say goodbye, in the same four matching colors.", p:"$14.99", w:"$19.99", s:"Sale · Save $5.00", u:"https://www.etsy.com/listing/4623622719"},
+ {g:"Memorial & Keepsakes", n:"Printed Prayer Cards", d:"Ready-design prayer cards, professionally printed and shipped — a navy “In Loving Memory” front and the full Irish Blessing on the back. Just the cards, without buying a whole funeral-home stationery package.", p:"from $79", w:null, s:"Free shipping", u:"https://www.etsy.com/listing/4625679775"},
+ {g:"Memorial & Keepsakes", n:"Personalized Dog Memorial Journal", d:"A 48-page keepsake journal printed with your dog's name and years — letters, memories, and room for the grief.", p:"$39.99", w:null, s:"Free shipping", u:"https://www.etsy.com/listing/4625899206"},
+ {g:"Memorial & Keepsakes", n:"Personalized Cat Memorial Journal", d:"A 48-page keepsake journal printed with your cat's name and years — letters, memories, and room for the grief.", p:"$39.99", w:null, s:"Free shipping", u:"https://www.etsy.com/listing/4625893875"},
+ {g:"Memorial & Keepsakes", n:"Pet Loss Gift Box", d:"The personalized journal plus a sympathy card and comfort cards, sent as one set to someone grieving a pet.", p:"$44.99", w:null, s:"Free shipping", u:"https://www.etsy.com/listing/4625906866"},
+ /* Legacy Binders & Bundles */
+ {g:"Legacy Binders & Bundles", n:"Legacy Edition Final Wishes Binder", d:"The printed keepsake edition of my final wishes planner: a made-to-order binder with tabbed sections, made to be kept in a safe and handed down.", p:"$79.99", w:"$99.99", s:"Sale · Save $20.00", u:"https://www.etsy.com/listing/4623625251"},
+ {g:"Legacy Binders & Bundles", n:"Legacy Binder — Cream & Gold", d:"The Legacy Edition binder in the warm Cream & Gold colorway — warm ivory with rich, glowing gold, with a keepsake feel.", p:"$79.99", w:"$99.99", s:"Sale · Save $20.00", u:"https://www.etsy.com/listing/4624911740"},
+ {g:"Legacy Binders & Bundles", n:"Legacy Binder — Rose Gold Blush", d:"The Legacy Edition binder in Rose Gold Blush — deep rosewood with rose gold, tender, warm, and personal.", p:"$79.99", w:"$99.99", s:"Sale · Save $20.00", u:"https://www.etsy.com/listing/4624908443"},
+ {g:"Legacy Binders & Bundles", n:"Legacy Binder — Warm Wood", d:"The Legacy Edition binder in Warm Wood — rich walnut with golden brass, like a fine wooden chest that has always belonged in the family.", p:"$79.99", w:"$99.99", s:"Sale · Save $20.00", u:"https://www.etsy.com/listing/4624910667"},
+ {g:"Legacy Binders & Bundles", n:"The Keepsake Bundle", d:"The Legacy binder plus the fillable planner, the memorial template bundle, and the pet keepsake book — the matching set, together in one order.", p:"$119.99", w:null, s:null, u:"https://www.etsy.com/listing/4624918895"},
+ {g:"Legacy Binders & Bundles", n:"The Everything Bundle", d:"Everything in the shop in one gift: the Legacy binder, the printed memorial stationery set, the religious keepsake set, the pet book, the templates, and the planner PDF.", p:"$389.99", w:"$519.99", s:"Sale · Save $130.00", u:"https://www.etsy.com/listing/4623891596"},
+ {g:"Legacy Binders & Bundles", n:"Estate Documents Portfolio", d:"A black leatherette zipper portfolio, laser-engraved in gold with your family name — a findable home for a signed will packet, certificates, and deeds, made to sit beside the Legacy binder in the safe.", p:"$59.99", w:null, s:"Free shipping", u:"https://www.etsy.com/listing/4625682498"}
+];
+var FEATURED = {n:"The Final Wishes Planner — Printed & Expanded Edition", d:"The complete 25-page edition of the planner you just used — expanded, with my full story and every worksheet, made to keep with your important papers.", p:"$12.99", w:"$19.99", s:"Sale · Save $7.00", u:BUY_URL, btn:"Get the expanded edition"};
+var LEGACY = PRODUCTS.filter(function(p){return p.n==="Legacy Edition Final Wishes Binder";})[0];
+var WALLET = PRODUCTS.filter(function(p){return p.n==="Emergency Wallet Card Set";})[0];
+
+var COSTS = {
+  burial: [
+    {k:"fh", label:"Funeral home services & ceremony", hint:"Typical $2,500 – $6,000", def:3500},
+    {k:"casket", label:"Casket", hint:"Typical $2,000 – $6,000", def:3000},
+    {k:"plot", label:"Burial plot", hint:"Typical $2,000 – $8,000", def:3500},
+    {k:"vault", label:"Burial vault", hint:"Typical $1,000 – $3,000 · Most cemeteries require one", def:1500},
+    {k:"stone", label:"Headstone or marker", hint:"Typical $1,000 – $4,000", def:1800},
+    {k:"grave", label:"Grave opening & closing", hint:"Typical $1,000 – $2,500", def:1400},
+    {k:"flowers", label:"Flowers, obituary & death certificates", hint:"Typical $500 – $1,500", def:800}
+  ],
+  cremation: [
+    {k:"fh", label:"Funeral home services & ceremony", hint:"Typical $2,500 – $6,000", def:2500},
+    {k:"cremfee", label:"Cremation fee", hint:"Typical $1,000 – $3,000", def:1800},
+    {k:"urn", label:"Urn", hint:"Typical $50 – $500", def:150},
+    {k:"flowers", label:"Flowers, obituary & death certificates", hint:"Typical $500 – $1,500", def:800}
+  ],
+  extra: [
+    {k:"medical", label:"Final medical bills", hint:"Any bills you expect to remain", def:0},
+    {k:"debts", label:"Debts to clear", hint:"Cards, loans, or other balances", def:0},
+    {k:"cushion", label:"A cushion for the family", hint:"Extra to help loved ones through the first months", def:0}
+  ]
+};
+var STANDS = [
+  {k:"insurance", q:"Life insurance already in place"},
+  {k:"savings", q:"Savings set aside for final expenses"},
+  {k:"wishes", q:"My wishes written down somewhere"},
+  {k:"documents", q:"Important documents gathered in one place"},
+  {k:"callfirst", q:"My family knows who to call first"}
+];
+
+/* ================= State ================= */
+var LS_KEY = "st-app-v1";
+function blankState(){
+  return { step:1, furthest:1, done:false,
+    choice:"burial", planFigure:16800,
+    stands:{}, costs:{}, haveIns:"", haveSav:"",
+    wishesService:"", wishesMusic:"", docsWhere:"", willWhere:"",
+    contact1Name:"", contact1Phone:"", contact2Name:"", contact2Phone:"",
+    name:"", phone:"" };
+}
+var S = blankState();
+try {
+  var raw = localStorage.getItem(LS_KEY);
+  if (raw) { var parsed = JSON.parse(raw); for (var k in blankState()) { if (parsed[k] !== undefined) S[k] = parsed[k]; } }
+} catch(e){}
+function save(){ try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch(e){} }
+function money(n){ n = Math.round(Number(n)||0); return "$" + n.toLocaleString("en-US"); }
+function num(v){ var n = parseFloat(String(v).replace(/[^0-9.]/g,"")); return isNaN(n) ? 0 : n; }
+function costTotal(){
+  var t = 0, set = COSTS[S.choice].concat(COSTS.extra);
+  set.forEach(function(item){ var v = S.costs[item.k]; t += (v === undefined || v === "") ? item.def : num(v); });
+  return t;
+}
+function haveTotal(){ return num(S.haveIns) + num(S.haveSav); }
+function gap(){ return Math.max(0, costTotal() - haveTotal()); }
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+/* ================= Navigation ================= */
+var screens = ["home","flow","done","shop"];
+function show(id){
+  screens.forEach(function(s){ document.getElementById("screen-"+s).classList.toggle("active", s===id); });
+  ["home","plan","shop"].forEach(function(t){ document.getElementById("tab-"+t).classList.remove("active"); });
+  if (id==="home") document.getElementById("tab-home").classList.add("active");
+  if (id==="flow" || id==="done") document.getElementById("tab-plan").classList.add("active");
+  if (id==="shop") document.getElementById("tab-shop").classList.add("active");
+  window.scrollTo(0,0);
+}
+document.getElementById("tab-home").addEventListener("click", function(){ show("home"); refreshHome(); });
+document.getElementById("tab-shop").addEventListener("click", function(){ show("shop"); });
+document.getElementById("tab-plan").addEventListener("click", function(){ if (S.done) { buildSummary(); show("done"); } else { renderStep(S.step); show("flow"); } });
+document.querySelectorAll("[data-goto]").forEach(function(el){ el.addEventListener("click", function(){ show(el.getAttribute("data-goto")); }); });
+
+/* ================= Home ================= */
+function hasProgress(){
+  return S.furthest > 1 || S.done || Object.keys(S.stands).length > 0 || S.name;
+}
+function refreshHome(){
+  var hp = hasProgress();
+  document.getElementById("resumeNote").style.display = hp ? "block" : "none";
+  document.getElementById("continueBtn").style.display = hp && !S.done ? "flex" : "none";
+  document.getElementById("startBtn").textContent = S.done ? "See my finished plan" : (hp ? "Start over with a fresh plan" : "Start my free plan");
+  var dismissed = false;
+  try { dismissed = localStorage.getItem("st-a2hs") === "1"; } catch(e){}
+  var standalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+  document.getElementById("a2hsCard").style.display = (!dismissed && !standalone) ? "block" : "none";
+}
+document.getElementById("startBtn").addEventListener("click", function(){
+  if (S.done) { buildSummary(); show("done"); return; }
+  if (hasProgress()) { S = blankState(); save(); }
+  renderStep(1); show("flow");
+});
+document.getElementById("continueBtn").addEventListener("click", function(){ renderStep(S.step); show("flow"); });
+document.getElementById("a2hsDismiss").addEventListener("click", function(){
+  try { localStorage.setItem("st-a2hs","1"); } catch(e){}
+  document.getElementById("a2hsCard").style.display = "none";
+});
+
+/* ================= Steps ================= */
+var TOTAL_STEPS = 7;
+function stepHead(kicker, title, lede){
+  return '<p class="kicker">'+kicker+'</p><h2 class="serif" style="font-size:1.7rem;">'+title+'</h2>' +
+    (lede ? '<p class="lede">'+lede+'</p>' : '');
+}
+function productCard(p, btnLabel){
+  return '<article class="product"><h3>'+esc(p.n)+'</h3><p>'+esc(p.d)+'</p>' +
+    '<div class="price-line"><span class="price">'+esc(p.p)+'</span>' +
+    (p.w ? '<span class="was">'+esc(p.w)+'</span>' : '') +
+    (p.s ? '<span class="save">'+esc(p.s)+'</span>' : '') + '</div>' +
+    '<a class="btn btn-navy" href="'+esc(p.u)+'" target="_blank" rel="noopener">'+(btnLabel||"See it on Etsy")+'</a></article>';
+}
+function quietCard(p, heading){
+  return '<div class="card"><h3 style="font-size:1.15rem; margin-bottom:6px;">'+heading+'</h3>' +
+    '<p style="margin-top:0;"><strong>'+esc(p.n)+' — '+esc(p.p)+'</strong></p>' +
+    '<p>'+esc(p.d)+'</p>' +
+    '<a class="btn btn-ghost" href="'+esc(p.u)+'" target="_blank" rel="noopener">See it on Etsy</a></div>';
+}
+
+var stepRenderers = {
+  1: function(){
+    var isB = S.choice === "burial";
+    var html = stepHead("First, the number that matters",
+      "What would it actually cost?",
+      "Pick the kind of service you have in mind. You&rsquo;ll see the real Las Vegas range right away — the full line-by-line plan comes a few steps in.");
+    html += '<button class="choice" data-choice="burial" aria-pressed="'+isB+'"><span class="tick">&#10003;</span><strong>Burial</strong>A funeral service, casket, and burial at a cemetery.</button>';
+    html += '<button class="choice" data-choice="cremation" aria-pressed="'+(!isB)+'"><span class="tick">&#10003;</span><strong>Cremation</strong>A service with cremation — simpler, and usually less.</button>';
+    html += '<div class="card card-gold" id="costPeek"></div>';
+    html += '<label class="field" for="planFigure">The figure to plan around, for now</label>' +
+      '<input type="number" inputmode="numeric" id="planFigure" value="'+esc(S.planFigure)+'">' +
+      '<p class="field-note">I plan around $16,800 for most families — it sits inside the Las Vegas range. Keep it, or put your own number. We&rsquo;ll add it up line by line in Step 3.</p>';
+    return html;
+  },
+  2: function(){
+    var html = stepHead("See where your family stands",
+      "A quick, honest check",
+      "Five yes-or-no questions. No wrong answers — this just shows what&rsquo;s already handled and what isn&rsquo;t.");
+    STANDS.forEach(function(item){
+      var v = S.stands[item.k];
+      html += '<div class="yn-row"><span>'+item.q+'</span><span class="yn-btns">' +
+        '<button data-yn="'+item.k+'" data-val="yes" class="'+(v==="yes"?"sel-yes":"")+'">Yes</button>' +
+        '<button data-yn="'+item.k+'" data-val="no" class="'+(v==="no"?"sel-no":"")+'">No</button></span></div>';
+    });
+    html += '<div class="card"><p style="margin:0;">You already have <strong id="standScore"></strong> in place. Whatever is missing is exactly what the next steps fix.</p></div>';
+    return html;
+  },
+  3: function(){
+    var set = COSTS[S.choice].concat(COSTS.extra);
+    var html = stepHead("Add up what it would cost",
+      S.choice === "burial" ? "The burial bill, line by line" : "The cremation bill, line by line",
+      "These start at typical Las Vegas numbers — change any of them to what your family would really choose.");
+    set.forEach(function(item){
+      var v = S.costs[item.k]; if (v === undefined) v = item.def;
+      html += '<div class="cost-row"><div class="lbl">'+item.label+'<small>'+item.hint+'</small></div>' +
+        '<input type="number" inputmode="numeric" min="0" data-cost="'+item.k+'" value="'+esc(v)+'"></div>';
+    });
+    html += '<div class="total-row"><span>Your total</span><span class="amt" id="costTotalOut"></span></div>';
+    html += '<p class="small muted">For reference: an all-in Las Vegas funeral runs about $13,000–$18,000. Your total is your family&rsquo;s real number.</p>';
+    return html;
+  },
+  4: function(){
+    var html = stepHead("What you already have",
+      "Now the other side of the ledger",
+      "Whatever is already covered, say so here. What&rsquo;s left is the gap your family would have to find — usually at the worst possible moment.");
+    html += '<label class="field" for="haveIns">Life insurance you already have</label><input type="number" inputmode="numeric" min="0" id="haveIns" value="'+esc(S.haveIns)+'" placeholder="0">';
+    html += '<label class="field" for="haveSav">Savings set aside for this</label><input type="number" inputmode="numeric" min="0" id="haveSav" value="'+esc(S.haveSav)+'" placeholder="0">';
+    html += '<div class="card card-gold"><div class="total-row" style="border:0; padding-top:0;"><span>Your plan so far</span><span class="amt" id="needOut"></span></div>' +
+      '<div class="total-row" style="border:0;"><span>Already covered</span><span class="amt" id="haveOut"></span></div>' +
+      '<div class="total-row"><span>The gap</span><span class="amt" id="gapOut"></span></div>' +
+      '<p class="small muted" style="margin-bottom:0;">That gap is the whole reason final expense coverage exists — it&rsquo;s the part a small policy is built to fill.</p></div>';
+    return html;
+  },
+  5: function(){
+    var html = stepHead("Write down your wishes",
+      "Leave instructions, not questions",
+      "What you want, and where everything lives — in writing, so nobody has to guess while they&rsquo;re grieving.");
+    html += '<label class="field" for="wishesService">The service I want</label><textarea id="wishesService" placeholder="Where, what kind of service, anything that matters to you">'+esc(S.wishesService)+'</textarea>';
+    html += '<label class="field" for="wishesMusic">Music, readings, or special requests</label><textarea id="wishesMusic" placeholder="Songs, verses, who should speak">'+esc(S.wishesMusic)+'</textarea>';
+    html += '<label class="field" for="docsWhere">Where my important documents live</label><textarea id="docsWhere" placeholder="Insurance policies, bank accounts, deeds — where your family will find them">'+esc(S.docsWhere)+'</textarea>';
+    html += '<label class="field" for="willWhere">Where my will or estate papers are</label><input type="text" id="willWhere" value="'+esc(S.willWhere)+'" placeholder="Or “not written yet” — that’s useful to know, too">';
+    html += quietCard(LEGACY, "Want this kept the way it deserves?");
+    return html;
+  },
+  6: function(){
+    var html = stepHead("Who gets called first",
+      "The first two phone calls",
+      "When the day comes, your family shouldn&rsquo;t have to hunt for these. They stay on this device only.");
+    html += '<label class="field" for="c1n">First call — name</label><input type="text" id="c1n" value="'+esc(S.contact1Name)+'" autocomplete="name">';
+    html += '<label class="field" for="c1p">First call — phone</label><input type="tel" id="c1p" value="'+esc(S.contact1Phone)+'" autocomplete="tel">';
+    html += '<label class="field" for="c2n">Second call — name</label><input type="text" id="c2n" value="'+esc(S.contact2Name)+'">';
+    html += '<label class="field" for="c2p">Second call — phone</label><input type="tel" id="c2p" value="'+esc(S.contact2Phone)+'">';
+    html += quietCard(WALLET, "These two calls, in your wallet");
+    return html;
+  },
+  7: function(){
+    var html = stepHead("Get ready for your call",
+      "Just your name and number",
+      "That&rsquo;s all Christopher ever needs from this planner — and even this stays on your own device. It prints on your plan sheet so you can read it out on the call.");
+    html += '<label class="field" for="yourName">Your name</label><input type="text" id="yourName" value="'+esc(S.name)+'" autocomplete="name">';
+    html += '<label class="field" for="yourPhone">Your phone number</label><input type="tel" id="yourPhone" value="'+esc(S.phone)+'" autocomplete="tel">';
+    html += '<div class="promise">Everything you typed stays on your own phone or computer. Nothing is sent to Christopher or to anyone else. Print your sheet and keep it with your important papers.</div>';
+    return html;
+  }
+};
+
+function updateCostPeek(){
+  var el = document.getElementById("costPeek");
+  if (!el) return;
+  if (S.choice === "burial") {
+    el.innerHTML = '<p style="margin:0 0 6px;">An all-in Las Vegas burial — funeral home, casket, plot, and the rest — runs about</p>' +
+      '<p class="big-number" style="margin:0;">$13,000 – $18,000</p>' +
+      '<p class="small muted" style="margin-bottom:0;">That&rsquo;s the range real families here actually pay, all in.</p>';
+  } else {
+    el.innerHTML = '<p style="margin:0 0 6px;">Cremation usually lands in the thousands — the national median for cremation with a service is about</p>' +
+      '<p class="big-number" style="margin:0;">$6,300</p>' +
+      '<p class="small muted" style="margin-bottom:0;">NFDA&rsquo;s national median. Your line-by-line number in Step 3 is the one that counts.</p>';
+  }
+}
+function updateStandScore(){
+  var el = document.getElementById("standScore"); if (!el) return;
+  var n = STANDS.filter(function(i){ return S.stands[i.k] === "yes"; }).length;
+  el.textContent = n + " of " + STANDS.length;
+}
+function updateTotals(){
+  var ct = document.getElementById("costTotalOut"); if (ct) ct.textContent = money(costTotal());
+  var no = document.getElementById("needOut"); if (no) no.textContent = money(costTotal());
+  var ho = document.getElementById("haveOut"); if (ho) ho.textContent = money(haveTotal());
+  var go = document.getElementById("gapOut"); if (go) go.textContent = money(gap());
+}
+
+function bindStep(){
+  var host = document.getElementById("stepHost");
+  host.querySelectorAll("[data-choice]").forEach(function(btn){
+    btn.addEventListener("click", function(){ S.choice = btn.getAttribute("data-choice"); save(); renderStep(1); });
+  });
+  host.querySelectorAll("[data-yn]").forEach(function(btn){
+    btn.addEventListener("click", function(){ S.stands[btn.getAttribute("data-yn")] = btn.getAttribute("data-val"); save(); renderStep(2); });
+  });
+  host.querySelectorAll("[data-cost]").forEach(function(inp){
+    inp.addEventListener("input", function(){ S.costs[inp.getAttribute("data-cost")] = inp.value; save(); updateTotals(); });
+  });
+  var bind = function(id, fn){ var el = document.getElementById(id); if (el) el.addEventListener("input", function(){ fn(el.value); save(); }); };
+  bind("planFigure", function(v){ S.planFigure = num(v); });
+  bind("haveIns", function(v){ S.haveIns = v; updateTotals(); });
+  bind("haveSav", function(v){ S.haveSav = v; updateTotals(); });
+  bind("wishesService", function(v){ S.wishesService = v; });
+  bind("wishesMusic", function(v){ S.wishesMusic = v; });
+  bind("docsWhere", function(v){ S.docsWhere = v; });
+  bind("willWhere", function(v){ S.willWhere = v; });
+  bind("c1n", function(v){ S.contact1Name = v; });
+  bind("c1p", function(v){ S.contact1Phone = v; });
+  bind("c2n", function(v){ S.contact2Name = v; });
+  bind("c2p", function(v){ S.contact2Phone = v; });
+  bind("yourName", function(v){ S.name = v; });
+  bind("yourPhone", function(v){ S.phone = v; });
+  updateCostPeek(); updateStandScore(); updateTotals();
+}
+
+function renderStep(n){
+  S.step = n; if (n > S.furthest) S.furthest = n; save();
+  document.getElementById("stepHost").innerHTML = stepRenderers[n]();
+  document.getElementById("stepLabel").textContent = "Step " + n + " of " + TOTAL_STEPS;
+  var pct = Math.round((n / TOTAL_STEPS) * 100);
+  document.getElementById("progressBar").style.width = pct + "%";
+  document.getElementById("stepPct").textContent =
+    n === 1 ? "You&rsquo;re on your way".replace("&rsquo;","’") :
+    n === TOTAL_STEPS ? "Last step" : pct + "% done";
+  document.getElementById("backBtn").style.visibility = n === 1 ? "hidden" : "visible";
+  document.getElementById("nextBtn").textContent = n === TOTAL_STEPS ? "Finish — see my plan" : "Continue";
+  bindStep();
+  window.scrollTo(0,0);
+}
+document.getElementById("backBtn").addEventListener("click", function(){ if (S.step > 1) renderStep(S.step - 1); });
+document.getElementById("quitBtn").addEventListener("click", function(){ save(); show("home"); refreshHome(); });
+document.getElementById("nextBtn").addEventListener("click", function(){
+  if (S.step < TOTAL_STEPS) { renderStep(S.step + 1); }
+  else { S.done = true; save(); buildSummary(); show("done"); }
+});
+
+/* ================= Completion ================= */
+function summaryRows(){
+  var rows = [];
+  if (S.name) rows.push(["Name", S.name]);
+  rows.push(["Service chosen", S.choice === "burial" ? "Burial" : "Cremation"]);
+  rows.push(["Your cost, added up", money(costTotal())]);
+  rows.push(["Figure to plan around", money(S.planFigure)]);
+  rows.push(["Already covered", money(haveTotal())]);
+  rows.push(["The gap", money(gap())]);
+  var sc = STANDS.filter(function(i){ return S.stands[i.k] === "yes"; }).length;
+  rows.push(["Already in place", sc + " of " + STANDS.length]);
+  if (S.contact1Name) rows.push(["First call", S.contact1Name + (S.contact1Phone ? " — " + S.contact1Phone : "")]);
+  if (S.contact2Name) rows.push(["Second call", S.contact2Name + (S.contact2Phone ? " — " + S.contact2Phone : "")]);
+  if (S.docsWhere) rows.push(["Documents live", S.docsWhere]);
+  if (S.willWhere) rows.push(["Will / estate papers", S.willWhere]);
+  return rows;
+}
+function buildSummary(){
+  document.getElementById("summaryList").innerHTML =
+    summaryRows().map(function(r){ return '<li><span class="k">'+esc(r[0])+'</span><span class="v">'+esc(r[1])+'</span></li>'; }).join("");
+  document.getElementById("doneShelf").innerHTML = productCard(FEATURED, FEATURED.btn) + productCard(LEGACY);
+  /* Print sheet */
+  var rows = summaryRows().map(function(r){ return '<tr><td class="k">'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'; }).join("");
+  var wishes = "";
+  if (S.wishesService) wishes += '<h2>The service I want</h2><p>'+esc(S.wishesService)+'</p>';
+  if (S.wishesMusic) wishes += '<h2>Music, readings &amp; special requests</h2><p>'+esc(S.wishesMusic)+'</p>';
+  document.getElementById("printSheet").innerHTML =
+    '<h1>My Final Wishes</h1><p>Prepared with the free Sometimes Tomorrow planner — Christopher M. Spruell, Las Vegas · 702-347-4536</p>' +
+    '<h2>My plan</h2><table>'+rows+'</table>' + wishes +
+    '<p style="margin-top:24px; color:#444;">Keep this sheet where your family will find it, and tell one person where it is. Sometimes tomorrow never comes.</p>';
+}
+document.getElementById("printBtn").addEventListener("click", function(){ buildSummary(); window.print(); });
+document.getElementById("startOverBtn").addEventListener("click", function(){
+  S = blankState(); save(); show("home"); refreshHome();
+});
+
+/* ================= Share ================= */
+document.querySelectorAll(".shareBtn").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    if (navigator.share) {
+      navigator.share({ title: "Sometimes Tomorrow — Free Final Wishes Planner", text: SHARE_TEXT, url: APP_URL }).catch(function(){});
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(SHARE_TEXT).then(function(){
+        var n = document.getElementById("shareNote");
+        if (n) n.textContent = "Copied — paste it into a text or email to your family.";
+        btn.textContent = "Copied — ready to paste";
+      }).catch(function(){});
+    }
+  });
+});
+
+/* ================= Shop ================= */
+(function buildShop(){
+  var groups = [], byGroup = {};
+  PRODUCTS.forEach(function(p){ if (!byGroup[p.g]) { byGroup[p.g] = []; groups.push(p.g); } byGroup[p.g].push(p); });
+  var html = productCard(FEATURED, FEATURED.btn);
+  groups.forEach(function(g){
+    html += '<h3 class="shop-group serif" style="font-size:1.45rem;">'+esc(g)+'</h3>';
+    byGroup[g].forEach(function(p){ html += productCard(p); });
+  });
+  document.getElementById("shopHost").innerHTML = html;
+})();
+
+/* ================= Init ================= */
+refreshHome();
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+  window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+}
+</script>
+</body>
+</html>

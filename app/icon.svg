@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0b1c2e"/>
+  <rect x="28" y="28" width="456" height="456" rx="46" fill="none" stroke="#c39a3f" stroke-width="7"/>
+  <rect x="49" y="49" width="414" height="414" rx="36" fill="none" stroke="#d9b45f" stroke-width="3"/>
+  <g fill="none" stroke="#d9b45f" stroke-width="6" stroke-linecap="round">
+    <path d="M171 138a27 27 0 1 1 27-27"/>
+    <path d="M198 138h34"/>
+    <path d="M341 138a27 27 0 1 0-27-27"/>
+    <path d="M314 138h-34"/>
+  </g>
+  <polygon points="256,124 270,138 256,152 242,138" fill="#c39a3f"/>
+  <text x="256" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="205" fill="#f4f2ec">ST</text>
+  <line x1="164" y1="410" x2="348" y2="410" stroke="#c39a3f" stroke-width="4"/>
+  <polygon points="256,402 264,410 256,418 248,410" fill="#d9b45f"/>
+</svg>
