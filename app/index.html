@@ -136,6 +136,20 @@ input:focus,textarea:focus{outline:3px solid var(--gold-l); border-color:var(--g
 .total-row{display:flex; justify-content:space-between; align-items:baseline; padding:16px 0 4px; border-top:3px solid var(--gold); margin-top:8px;}
 .total-row .amt{font-family:"Newsreader", Georgia, serif; font-size:1.7rem; font-weight:700; color:var(--navy);}
 
+select{
+  width:100%; min-height:56px; padding:12px 14px; border:2px solid var(--line); border-radius:12px; background:#fff;
+}
+select:focus{outline:3px solid var(--gold-l); border-color:var(--gold);}
+
+/* Info folds — restored information dropdowns */
+.info-fold{border:1px solid var(--line); border-radius:12px; margin:12px 0; background:#fff;}
+.info-fold-btn{display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%; background:transparent; border:0; padding:14px 16px; font-size:1rem; font-weight:700; color:var(--navy); text-align:left;}
+.info-fold-btn .chev{color:var(--gold-dark); font-weight:700;}
+.info-fold-body{padding:0 16px 14px; font-size:.97rem;}
+.info-fold-body p{margin:0 0 10px;}
+.info-fold-body p:last-child{margin-bottom:0;}
+.info-fold-body ul{margin:0 0 10px; padding-left:20px;}
+
 /* Progress */
 .progress-wrap{position:sticky; top:0; z-index:20; background:var(--cream); padding:12px 0 8px; border-bottom:1px solid var(--line);}
 .progress-meta{display:flex; justify-content:space-between; font-size:.9rem; font-weight:600; color:var(--ink-soft); margin-bottom:6px;}
@@ -225,6 +239,45 @@ nav.tabbar button.active{color:var(--gold-l);}
         <li>A one-page plan you can print and keep with your papers</li>
       </ul>
       <p class="small muted" style="margin-bottom:0;">&#9733; Rated 5 stars on Google reviews</p>
+    </div>
+
+    <div class="card">
+      <h3 style="font-size:1.2rem; margin-bottom:6px;">Good to know</h3>
+      <p style="margin:0 0 6px;">Three short answers families ask for most &mdash; tap one to open it.</p>
+      <div class="info-fold">
+        <button type="button" class="info-fold-btn" aria-expanded="false">The first 48 hours<span class="chev" aria-hidden="true">&#9662;</span></button>
+        <div class="info-fold-body" hidden>
+          <p>When the day comes, only a few things truly can&rsquo;t wait:</p>
+          <ul>
+            <li>Call the funeral home &mdash; they&rsquo;ll help with the arrangements and the death certificates.</li>
+            <li>Find the wishes sheet and the policy papers.</li>
+            <li>Tell close family first &mdash; everyone else can wait a day or two.</li>
+            <li>Order several certified copies of the death certificate &mdash; banks and insurers each need their own.</li>
+            <li>Call Christopher to start the claim &mdash; he&rsquo;ll walk your family through it.</li>
+          </ul>
+          <p class="muted">Almost everything else can wait until the fog clears.</p>
+        </div>
+      </div>
+      <p class="field-note">Open this if your family would be guessing what to do first.</p>
+      <div class="info-fold">
+        <button type="button" class="info-fold-btn" aria-expanded="false">Social Security &mdash; the honest version<span class="chev" aria-hidden="true">&#9662;</span></button>
+        <div class="info-fold-body" hidden>
+          <p>There&rsquo;s a one-time death payment of <strong>$255</strong> &mdash; and it doesn&rsquo;t arrive on its own. Your family has to apply for it, generally within two years.</p>
+          <p>A spouse can also claim a monthly survivor benefit on the other&rsquo;s record, as early as age 60 &mdash; claiming early pays less.</p>
+          <p>Applying starts with a phone call to Social Security: <strong>1-800-772-1213</strong>.</p>
+          <p class="muted">It helps &mdash; but it was never meant to pay a funeral bill by itself.</p>
+        </div>
+      </div>
+      <p class="field-note">Open this before anyone counts on Social Security to cover the bill.</p>
+      <div class="info-fold">
+        <button type="button" class="info-fold-btn" aria-expanded="false">For veterans<span class="chev" aria-hidden="true">&#9662;</span></button>
+        <div class="info-fold-body" hidden>
+          <p>The VA covers burial in a national cemetery at no cost to the family: the gravesite, opening and closing, a headstone or marker, and a burial flag.</p>
+          <p>What it doesn&rsquo;t pay: the funeral home bill, the service, or the casket.</p>
+          <p class="muted">Keep the DD-214 where your family can find it &mdash; eligibility runs through that one paper.</p>
+        </div>
+      </div>
+      <p class="field-note">Open this if you or your spouse served &mdash; it changes what your family pays.</p>
     </div>
 
     <div class="card card-gold">
@@ -433,6 +486,7 @@ function blankState(){
   return { step:1, furthest:1, done:false,
     choice:"burial", planFigure:16800,
     stands:{}, costs:{}, haveIns:"", haveSav:"",
+    serviceType:"Traditional funeral service",
     wishesService:"", wishesMusic:"", docsWhere:"", willWhere:"",
     contact1Name:"", contact1Phone:"", contact2Name:"", contact2Phone:"",
     name:"", phone:"" };
@@ -522,6 +576,7 @@ var stepRenderers = {
       "Pick the kind of service you have in mind. You&rsquo;ll see the real Las Vegas range right away — the full line-by-line plan comes a few steps in.");
     html += '<button class="choice" data-choice="burial" aria-pressed="'+isB+'"><span class="tick">&#10003;</span><strong>Burial</strong>A funeral service, casket, and burial at a cemetery.</button>';
     html += '<button class="choice" data-choice="cremation" aria-pressed="'+(!isB)+'"><span class="tick">&#10003;</span><strong>Cremation</strong>A service with cremation — simpler, and usually less.</button>';
+    html += '<p class="field-note">Pick the one you&rsquo;d want. You can switch any time &mdash; this just sets your starting numbers.</p>';
     html += '<div class="card card-gold" id="costPeek"></div>';
     html += '<label class="field" for="planFigure">The figure to plan around, for now</label>' +
       '<input type="number" inputmode="numeric" id="planFigure" value="'+esc(S.planFigure)+'">' +
@@ -538,6 +593,7 @@ var stepRenderers = {
         '<button data-yn="'+item.k+'" data-val="yes" class="'+(v==="yes"?"sel-yes":"")+'">Yes</button>' +
         '<button data-yn="'+item.k+'" data-val="no" class="'+(v==="no"?"sel-no":"")+'">No</button></span></div>';
     });
+    html += '<p class="field-note">Tap Yes or No for each one. There are no wrong answers &mdash; nobody sees this but you.</p>';
     html += '<div class="card"><p style="margin:0;">You already have <strong id="standScore"></strong> in place. Whatever is missing is exactly what the next steps fix.</p></div>';
     return html;
   },
@@ -551,6 +607,7 @@ var stepRenderers = {
       html += '<div class="cost-row"><div class="lbl">'+item.label+'<small>'+item.hint+'</small></div>' +
         '<input type="number" inputmode="numeric" min="0" data-cost="'+item.k+'" value="'+esc(v)+'"></div>';
     });
+    html += '<p class="field-note" style="margin-top:10px;">Start from these typical numbers and change any line to fit your family &mdash; your total updates as you go.</p>';
     html += '<div class="total-row"><span>Your total</span><span class="amt" id="costTotalOut"></span></div>';
     html += '<p class="small muted">For reference: an all-in Las Vegas funeral runs about $13,000–$18,000. Your total is your family&rsquo;s real number.</p>';
     return html;
@@ -561,16 +618,29 @@ var stepRenderers = {
       "Whatever is already covered, say so here. What&rsquo;s left is the gap your family would have to find — usually at the worst possible moment.");
     html += '<label class="field" for="haveIns">Life insurance you already have</label><input type="number" inputmode="numeric" min="0" id="haveIns" value="'+esc(S.haveIns)+'" placeholder="0">';
     html += '<label class="field" for="haveSav">Savings set aside for this</label><input type="number" inputmode="numeric" min="0" id="haveSav" value="'+esc(S.haveSav)+'" placeholder="0">';
+    html += '<p class="field-note">Only count money that&rsquo;s truly set aside for this. Zero is a fine answer &mdash; most families start at zero.</p>';
     html += '<div class="card card-gold"><div class="total-row" style="border:0; padding-top:0;"><span>Your plan so far</span><span class="amt" id="needOut"></span></div>' +
       '<div class="total-row" style="border:0;"><span>Already covered</span><span class="amt" id="haveOut"></span></div>' +
       '<div class="total-row"><span>The gap</span><span class="amt" id="gapOut"></span></div>' +
       '<p class="small muted" style="margin-bottom:0;">That gap is the whole reason final expense coverage exists — it&rsquo;s the part a small policy is built to fill.</p></div>';
+    html += '<div class="info-fold"><button type="button" class="info-fold-btn" aria-expanded="false">Term or whole life &mdash; in plain words<span class="chev" aria-hidden="true">&#9662;</span></button>' +
+      '<div class="info-fold-body" hidden>' +
+      '<p><strong>Whole life</strong> &mdash; lasts your whole life and pays whenever the day comes. It&rsquo;s what most final expense plans are.</p>' +
+      '<p><strong>Term</strong> &mdash; covers a set number of years, then ends. Often cheaper, but it can run out before it&rsquo;s needed.</p>' +
+      '<p class="muted">Most families covering a funeral choose whole life, so the coverage can&rsquo;t expire first.</p>' +
+      '</div></div>';
+    html += '<p class="field-note">Open this if you&rsquo;re not sure which kind of coverage fits a funeral bill.</p>';
     return html;
   },
   5: function(){
     var html = stepHead("Write down your wishes",
       "Leave instructions, not questions",
       "What you want, and where everything lives — in writing, so nobody has to guess while they&rsquo;re grieving.");
+    html += '<label class="field" for="serviceType">Type of service</label>' +
+      '<select id="serviceType">' +
+      ["Traditional funeral service","Memorial service","Graveside service","Celebration of life","No service"].map(function(o){ return '<option'+(S.serviceType===o?' selected':'')+'>'+o+'</option>'; }).join('') +
+      '</select>' +
+      '<p class="field-note">The kind of service you&rsquo;d like &mdash; you can change your mind any time.</p>';
     html += '<label class="field" for="wishesService">The service I want</label><textarea id="wishesService" placeholder="Where, what kind of service, anything that matters to you">'+esc(S.wishesService)+'</textarea>';
     html += '<label class="field" for="wishesMusic">Music, readings, or special requests</label><textarea id="wishesMusic" placeholder="Songs, verses, who should speak">'+esc(S.wishesMusic)+'</textarea>';
     html += '<label class="field" for="docsWhere">Where my important documents live</label><textarea id="docsWhere" placeholder="Insurance policies, bank accounts, deeds — where your family will find them">'+esc(S.docsWhere)+'</textarea>';
@@ -636,6 +706,16 @@ function bindStep(){
   host.querySelectorAll("[data-cost]").forEach(function(inp){
     inp.addEventListener("input", function(){ S.costs[inp.getAttribute("data-cost")] = inp.value; save(); updateTotals(); });
   });
+  host.querySelectorAll(".info-fold-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var body = btn.nextElementSibling;
+      var open = body.hidden;
+      body.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  var stEl = document.getElementById("serviceType");
+  if (stEl) stEl.addEventListener("change", function(){ S.serviceType = stEl.value; save(); });
   var bind = function(id, fn){ var el = document.getElementById(id); if (el) el.addEventListener("input", function(){ fn(el.value); save(); }); };
   bind("planFigure", function(v){ S.planFigure = num(v); });
   bind("haveIns", function(v){ S.haveIns = v; updateTotals(); });
@@ -679,6 +759,7 @@ function summaryRows(){
   var rows = [];
   if (S.name) rows.push(["Name", S.name]);
   rows.push(["Service chosen", S.choice === "burial" ? "Burial" : "Cremation"]);
+  if (S.serviceType) rows.push(["Type of service", S.serviceType]);
   rows.push(["Your cost, added up", money(costTotal())]);
   rows.push(["Figure to plan around", money(S.planFigure)]);
   rows.push(["Already covered", money(haveTotal())]);
@@ -703,7 +784,8 @@ function buildSummary(){
   /* Print sheet */
   var rows = summaryRows().map(function(r){ return '<tr><td class="k">'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'; }).join("");
   var wishes = "";
-  if (S.wishesService) wishes += '<h2>The service I want</h2><p>'+esc(S.wishesService)+'</p>';
+  if (S.serviceType) wishes += '<h2>The service I want</h2><p>'+esc(S.serviceType)+'</p>';
+  if (S.wishesService) wishes += '<p>'+esc(S.wishesService)+'</p>';
   if (S.wishesMusic) wishes += '<h2>Music, readings &amp; special requests</h2><p>'+esc(S.wishesMusic)+'</p>';
   document.getElementById("printSheet").innerHTML =
     '<h1>My Final Wishes</h1><p>Prepared with the free Sometimes Tomorrow planner — Christopher M. Spruell, Las Vegas · 702-347-4536</p>' +
@@ -727,6 +809,16 @@ if (bdSend) bdSend.addEventListener("click", function(){
 });
 document.getElementById("startOverBtn").addEventListener("click", function(){
   S = blankState(); save(); show("home"); refreshHome();
+});
+
+/* Home info folds */
+document.querySelectorAll("#screen-home .info-fold-btn").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var body = btn.nextElementSibling;
+    var open = body.hidden;
+    body.hidden = !open;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
 });
 
 /* ================= Share ================= */
