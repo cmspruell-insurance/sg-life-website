@@ -622,6 +622,8 @@ nav.tabbar button.active{color:var(--gold-l);}
         <img class="portrait-small" src="https://www.sglifeinsurance.com/images/christopher-portrait.jpg" alt="Portrait of Christopher M. Spruell" width="64" height="64" loading="lazy">
         <p class="small" style="color:#b9c6cf; margin:0;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">(702) 347-4536</a> &mdash; I answer my own phone.</p>
       </div>
+      <p style="margin-top:16px;">Optional &mdash; want me to check which carriers you likely qualify for before we talk? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqzsiEIl4gBt_RmXMuv6LaAGSoLnGYRSg4H4EE8edkF7NoKA/viewform" target="_blank" rel="noopener" style="color:#d9b45f;">Answer the health questions</a> (about 2 minutes). It makes our call shorter.</p>
+      <p class="small" style="color:#b9c6cf;">Only I see your answers.</p>
       <div class="capture-email">
         <h3 style="font-size:1.2rem; margin-bottom:6px;">Optional<span class="js-name-suffix"></span> &mdash; want a copy of your numbers?</h3>
         <p style="margin-top:0;">I&rsquo;ll email you the breakdown &mdash; your total, what you already have, and the gap &mdash; so you can look it over or show your family. Your plan above stays right here on your device either way, and the planner stays free whether you do this or not.</p>
@@ -1908,6 +1910,8 @@ var stepRenderers = {
     html += '<label class="field" for="yourName">Your name</label><input type="text" id="yourName" value="'+esc(S.name)+'" autocomplete="name">';
     html += '<label class="field" for="yourPhone">Your phone number</label><input type="tel" id="yourPhone" value="'+esc(S.phone)+'" autocomplete="tel">';
     html += '<p class="field-note" style="margin-top:10px;">This call is where your plan becomes protection.</p>';
+    html += '<p class="field-note" style="margin-top:10px;">Optional &mdash; want me to check which carriers you likely qualify for before we talk? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqzsiEIl4gBt_RmXMuv6LaAGSoLnGYRSg4H4EE8edkF7NoKA/viewform" target="_blank" rel="noopener">Answer the health questions</a> (about 2 minutes). It makes our call shorter.</p>';
+    html += '<p class="field-note">Only I see your answers.</p>';
     html += '<div class="promise">Everything you typed stays on your own phone or computer. Nothing is sent to Christopher or to anyone else. Print your sheet and keep it with your important papers.</div>';
     return html;
   }
