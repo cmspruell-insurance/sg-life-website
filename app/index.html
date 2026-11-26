@@ -267,7 +267,7 @@ nav.tabbar button.active{color:var(--gold-l);}
     </div>
 
     <div class="card card-navy" id="captureMoment">
-      <p class="kicker" style="color:#d9b45f;">Your number</p>
+      <p class="kicker" style="color:#d9b45f;">Your number<span class="js-name-suffix"></span></p>
       <div class="capture-big" id="doneTotal">$16,800</div>
       <p style="margin-top:0;">That&rsquo;s your number to plan around &mdash; the figure you set in Step 1, inside the Las Vegas all-in range of $13,000 &ndash; $18,000. Your own line-by-line total came to <strong id="doneCost">$0</strong>.</p>
       <p style="margin-top:0;">You already have <strong id="doneHave">$0</strong> in place &mdash; so right now, about <strong id="doneGap">$16,800</strong> would come out of your family&rsquo;s pocket in the first week or two.</p>
@@ -279,7 +279,7 @@ nav.tabbar button.active{color:var(--gold-l);}
       <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call &mdash; let&rsquo;s walk through your number together</a>
       <p class="small" style="color:#b9c6cf;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">(702) 347-4536</a> &mdash; I answer my own phone.</p>
       <div class="capture-email">
-        <h3 style="font-size:1.2rem; margin-bottom:6px;">Optional &mdash; want a copy of your numbers?</h3>
+        <h3 style="font-size:1.2rem; margin-bottom:6px;">Optional<span class="js-name-suffix"></span> &mdash; want a copy of your numbers?</h3>
         <p style="margin-top:0;">I&rsquo;ll email you the breakdown &mdash; your total, what you already have, and the gap &mdash; so you can look it over or show your family. Your plan above stays right here on your device either way, and the planner stays free whether you do this or not.</p>
         <label for="bdName">Your name</label>
         <input type="text" id="bdName" autocomplete="name" placeholder="Your name">
@@ -682,6 +682,7 @@ function buildSummary(){
   var dc = document.getElementById("doneCost"); if (dc) dc.textContent = money(costTotal());
   var dh = document.getElementById("doneHave"); if (dh) dh.textContent = money(haveTotal());
   var dg = document.getElementById("doneGap"); if (dg) dg.textContent = money(gap());
+  applyName();
   document.getElementById("doneShelf").innerHTML = productCard(FEATURED, FEATURED.btn) + productCard(LEGACY);
   /* Print sheet */
   var rows = summaryRows().map(function(r){ return '<tr><td class="k">'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'; }).join("");
@@ -694,6 +695,16 @@ function buildSummary(){
     '<p style="margin-top:24px; color:#444;">Keep this sheet where your family will find it, and tell one person where it is. Sometimes tomorrow never comes.</p>';
 }
 document.getElementById("printBtn").addEventListener("click", function(){ buildSummary(); window.print(); });
+/* Name personalization: greet the visitor by first name when one has been given (Step 7 name, or the breakdown form's name field). Name stays optional; with no name the generic copy stands exactly as written. */
+function firstNameOf(raw){ if(!raw) return ""; var t = String(raw).trim().split(/\s+/)[0]||""; t = t.replace(/^[^A-Za-z\u00C0-\u00FF'\-]+/,"").replace(/[^A-Za-z\u00C0-\u00FF'\-]+$/,""); if(!t) return ""; return t.charAt(0).toUpperCase()+t.slice(1); }
+function applyName(){
+  var bd = document.getElementById("bdName");
+  var fn = firstNameOf((bd && bd.value.trim()) ? bd.value : S.name);
+  var sfx = fn ? ", " + fn : "";
+  document.querySelectorAll(".js-name-suffix").forEach(function(el){ el.textContent = sfx; });
+}
+var bdNameEl = document.getElementById("bdName");
+if (bdNameEl) bdNameEl.addEventListener("input", applyName);
 var bdSend = document.getElementById("bdSend");
 if (bdSend) bdSend.addEventListener("click", function(){
   try { localStorage.setItem("st-breakdown-ask", JSON.stringify({ name:(document.getElementById("bdName")||{}).value||"", email:(document.getElementById("bdEmail")||{}).value||"", planFigure:S.planFigure, cost:costTotal(), have:haveTotal(), gap:gap(), when:new Date().toISOString() })); } catch(e){}
