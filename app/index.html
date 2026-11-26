@@ -92,6 +92,18 @@ header .motto{color:var(--gold-l); font-style:italic; font-family:"Newsreader", 
 .card-gold{border:2px solid var(--gold);}
 .promise{border-left:5px solid var(--gold); background:var(--paper); padding:16px 18px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:1.02rem;}
 
+/* Portrait */
+.portrait-hero{
+  float:right; width:104px; height:104px; object-fit:cover; object-position:top center;
+  border-radius:50%; border:3px solid var(--gold); margin:2px 0 10px 16px;
+  box-shadow:0 2px 8px rgba(11,28,46,.18); background:var(--paper);
+}
+.portrait-row{display:flex; align-items:center; gap:14px;}
+.portrait-small{
+  flex:0 0 auto; width:64px; height:64px; object-fit:cover; object-position:top center;
+  border-radius:50%; border:2px solid var(--gold-l);
+}
+
 /* Choice cards */
 .choice{display:block; width:100%; text-align:left; background:var(--paper); border:2px solid var(--line); border-radius:var(--radius); padding:18px; margin:12px 0; font-size:1.05rem;}
 .choice strong{display:block; font-family:"Newsreader", Georgia, serif; font-size:1.25rem; margin-bottom:4px; color:var(--navy);}
@@ -192,6 +204,7 @@ nav.tabbar button.active{color:var(--gold-l);}
 <main class="screen active" id="screen-home">
   <div class="wrap">
     <p class="kicker">The Free Final Wishes Planner</p>
+    <img class="portrait-hero" src="https://www.sglifeinsurance.com/images/christopher-portrait.jpg" alt="Portrait of Christopher M. Spruell" width="104" height="104">
     <h2 class="serif" style="font-size:1.9rem;">Your family&rsquo;s plan, written down in about two minutes.</h2>
     <p class="lede">I&rsquo;m <strong>Christopher M. Spruell</strong>, a final expense broker here in Las Vegas. I built this planner after my own family learned the hard way what happens when nothing is written down. It&rsquo;s free, it asks for no sign-up, and everything you type stays on your own phone.</p>
 
@@ -277,7 +290,10 @@ nav.tabbar button.active{color:var(--gold-l);}
       <h3 style="font-size:1.3rem; margin-bottom:8px;">Your one next step</h3>
       <p style="margin-top:0;">A short phone call with me &mdash; about ten minutes &mdash; and I&rsquo;ll check your numbers against real policies, with no pressure either way. Phone only, at a time that suits you.</p>
       <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call &mdash; let&rsquo;s walk through your number together</a>
-      <p class="small" style="color:#b9c6cf;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">(702) 347-4536</a> &mdash; I answer my own phone.</p>
+      <div class="portrait-row" style="margin-top:14px;">
+        <img class="portrait-small" src="https://www.sglifeinsurance.com/images/christopher-portrait.jpg" alt="Portrait of Christopher M. Spruell" width="64" height="64" loading="lazy">
+        <p class="small" style="color:#b9c6cf; margin:0;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">(702) 347-4536</a> &mdash; I answer my own phone.</p>
+      </div>
       <div class="capture-email">
         <h3 style="font-size:1.2rem; margin-bottom:6px;">Optional<span class="js-name-suffix"></span> &mdash; want a copy of your numbers?</h3>
         <p style="margin-top:0;">I&rsquo;ll email you the breakdown &mdash; your total, what you already have, and the gap &mdash; so you can look it over or show your family. Your plan above stays right here on your device either way, and the planner stays free whether you do this or not.</p>
