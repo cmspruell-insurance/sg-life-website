@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="data:," />
     <title>Christopher M. Spruell — Life Insurance, Las Vegas</title>
-    <meta name="description" content="Christopher M. Spruell is a licensed life insurance broker in Las Vegas, Nevada with SLS, specializing in final expense and whole life insurance. Free policy reviews. Call (702) 347-4536." />
+    <meta name="description" content="Christopher M. Spruell is a licensed life insurance broker in Las Vegas, Nevada, specializing in final expense and whole life insurance. Free policy reviews. Call (702) 347-4536." />
     <meta property="og:title" content="Christopher M. Spruell — Life Insurance, Las Vegas" />
     <meta property="og:description" content="Final expense and whole life insurance for Las Vegas families — handled personally, by phone, by a broker who has lived the other side of it. Call (702) 347-4536." />
     <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@
       "@context": "https://schema.org",
       "@type": "InsuranceAgency",
       "name": "Christopher M. Spruell",
-      "description": "Licensed life insurance broker in Las Vegas, Nevada, with SLS, specializing in final expense insurance, burial and cremation coverage, and whole life insurance. Free policy reviews.",
+      "description": "Licensed life insurance broker in Las Vegas, Nevada, specializing in final expense insurance, burial and cremation coverage, and whole life insurance. Free policy reviews.",
       "telephone": "+1-702-347-4536",
       "address": { "@type": "PostalAddress", "addressLocality": "Las Vegas", "addressRegion": "NV", "addressCountry": "US" },
       "areaServed": ["Las Vegas, Nevada", "Henderson, Nevada", "North Las Vegas, Nevada", "Boulder City, Nevada", "Nevada", "Texas", "Florida"],
@@ -573,7 +573,17 @@ section.block + section.block::before{content:"";position:absolute;top:-7px;left
 section.block h2::before,section.block h2::after{content:"";display:inline-block;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);vertical-align:middle;position:relative;top:-3px}
 section.block h2::before{margin-right:14px}
 section.block h2::after{margin-left:14px}
-</style>
+
+    /* Phase 2: sticky mobile call bar */
+    .sticky-callbar{display:none}
+    @media (max-width:767px){
+      .sticky-callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:999;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#2F4356;border-top:2px solid #B49A5E}
+      .sticky-callbar a{flex:1;text-align:center;padding:12px 6px;border-radius:8px;font-weight:700;text-decoration:none}
+      .sticky-callbar .cb-call{background:#B49A5E;color:#1d2a38}
+      .sticky-callbar .cb-book{background:transparent;color:#FAF6EE;border:1px solid #B49A5E}
+      body{padding-bottom:64px}
+    }
+  </style>
   </head>
   <body>
     <header class="topbar">
@@ -588,12 +598,12 @@ section.block h2::after{margin-left:14px}
         <nav aria-label="Page sections">
           <a href="#services">Services</a>
           <a href="#story">My Story</a>
-          <a href="#free-planner">Free Planner</a>
+          <a href="https://planner.sglifeinsurance.com">Free Planner</a>
           <a href="#planner">Planner</a>
           <a href="shop.html">Keepsakes</a>
           <a href="blog/index.html">Blog</a>
           <a href="#faq">Questions</a>
-          <a href="#hiring">Hiring</a>
+          <a href="https://www.theslsway.com/cspruell" target="_blank" rel="noopener">Join the Team</a>
           <a href="#contact">Contact</a>
         </nav>
         <a class="btn small" href="tel:+17023474536" target="_blank" rel="noopener" style="margin-left:auto" id="top-call">
@@ -610,15 +620,15 @@ section.block h2::after{margin-left:14px}
           <div>
             <p class="hero-eyebrow">Insurance Broker · Las Vegas, Nevada</p>
             <h1>The funeral bill should never land on <em>the people you love.</em></h1>
-            <p class="intro">I'm <strong>Christopher M. Spruell</strong>, a licensed life insurance broker in Las Vegas with SLS. I help families put affordable, permanent final expense coverage in place — built around your family and your budget, not a one-size-fits-all policy.</p>
+            <p class="intro">I'm <strong>Christopher M. Spruell</strong>, a licensed life insurance broker in Las Vegas. I help families put affordable, permanent final expense coverage in place — by phone, at your pace, with no pressure.</p>
             <div class="hero-ctas">
               <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 Call (702) 347-4536
               </a>
-              <a class="btn ghost" href="#contact">Get a free policy review</a>
+              <a class="btn ghost" href="https://planner.sglifeinsurance.com">Book a phone call</a>
             </div>
-            <p class="hero-note">When you call, you get me — <strong>I answer my own phone.</strong> Everything is handled by phone, at your pace, with no pressure. Not ready to call? <a href="#free-planner"><strong>Try the free planner first →</strong></a></p>
+            <p class="hero-note">When you call, you get me — <strong>I answer my own phone.</strong> Everything is handled by phone, at your pace, with no pressure. Not ready to call? <a href="https://planner.sglifeinsurance.com"><strong>Try the free planner first →</strong></a></p>
           </div>
           <a class="portrait-link" href="https://www.linkedin.com/in/christopher-m-spruell-pro-file/" target="_blank" rel="noopener" aria-label="Christopher M. Spruell on LinkedIn">
           <div class="hero-photo">
@@ -639,6 +649,29 @@ section.block h2::after{margin-left:14px}
       </div>
 
       <!-- SERVICES -->
+      <section class="block" id="start-here" style="padding-top: 10px;">
+        <div class="wrap">
+          <p class="lede" style="text-align:center"><strong>★ Rated 5 stars on Google reviews</strong> · Free policy reviews — no cost, no obligation · $30,000–$45,000 — the coverage range most families choose · Licensed in NV · TX · FL</p>
+          <h2 style="text-align:center">Where are you starting from?</h2>
+          <div class="svc-list">
+            <article>
+              <h3>I need coverage</h3>
+              <p>You don't have a policy yet, and you want the funeral bill handled before it lands on your family.</p>
+              <p><a href="#services">See what I do →</a></p>
+            </article>
+            <article>
+              <h3>I already have a policy</h3>
+              <p>You're not sure it still fits — or what it actually covers. I'll read it with you, free.</p>
+              <p><a href="services/free-policy-review.html">Get a free policy review →</a></p>
+            </article>
+            <article>
+              <h3>I'm planning ahead</h3>
+              <p>Start with the free planner: your real cost number, your wishes, and a one-sheet plan — in about two minutes.</p>
+              <p><a href="https://planner.sglifeinsurance.com">Open the free planner →</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
       <section class="block" id="services">
         <div class="wrap">
           <p class="kicker">What I do</p>
@@ -694,7 +727,7 @@ section.block h2::after{margin-left:14px}
             <h2>I've lived the other side of this conversation</h2>
             <p>In 2018, I lost my wife Jessica suddenly — a brain aneurysm, at 48 years old. We had been married 15 years. <strong>We had no life insurance in place.</strong></p>
             <p>On top of the grief, I was suddenly raising our son alone, on one income, figuring out funeral costs and everything that came after. Nobody should have to do math like that in the worst week of their life.</p>
-            <p>That's why I do this work, and why I do it the way I do — patiently, by phone, with the numbers in plain English. A final expense plan isn't really about a policy. It's about the week your family will go through, and whether money is one of the problems in it.</p>
+            <p>That's why I do this work, and why I do it the way I do — patiently, by phone, with the numbers in plain English. A final expense plan isn't really about a policy. It's about the week your family will go through, and whether money is one of the problems in it. My dad died of leukemia, and my brother died of cancer not long after — also with no coverage in place. Three of the closest losses of my life, and every one of them came with a bill and no plan.</p>
           </div>
           <blockquote class="pullquote">
             “Sometimes tomorrow never comes. My job is making sure your family is ready if it doesn't.”
@@ -704,6 +737,16 @@ section.block h2::after{margin-left:14px}
       </section>
 
       <!-- HOW IT WORKS -->
+      <section class="block" id="reviews-proof" style="padding-top: 10px;">
+        <div class="wrap">
+          <p class="kicker">What Families Say</p>
+          <h2>Rated 5 stars on Google reviews</h2>
+          <blockquote><p>&ldquo;Personable. Knowledgeable. Truly a pleasure to do business with!&rdquo;</p><p>— Michaele, Google review</p></blockquote>
+          <blockquote><p>&ldquo;Chris found exactly the amount of benefits my family needs at the perfect price. Would definitely recommend him!&rdquo;</p><p>— Wayne, Google review</p></blockquote>
+          <blockquote><p>&ldquo;Thank you so much for helping my family! It really means a lot&rdquo;</p><p>— Samara, Google review</p></blockquote>
+          <p><a href="https://reviews.sglifeinsurance.com">Read more reviews — or leave one →</a></p>
+        </div>
+      </section>
       <section class="block" id="how">
         <div class="wrap how-grid">
           <div class="how-photo">
@@ -740,442 +783,39 @@ section.block h2::after{margin-left:14px}
       <!-- FREE FINAL EXPENSE PLANNER APP -->
       <section class="block" id="free-planner" style="padding-top: 10px;">
         <div class="wrap">
-          <div class="app-card">
-            <div class="app-in">
-              <p class="kicker">Free tool · Final Expense Planner</p>
-              <h2>Plan it in two minutes — free</h2>
-              <p class="app-lede">Not sure what you need, or whether what you have is enough? My free Final Expense Planner walks you through it step by step — and at the end, it tells you plainly what you need and why. No sign-up, nothing to buy to use it.</p>
-              <div class="app-grid">
-                <div class="app-feat">
-                  <div class="svc-num" aria-hidden="true">01</div>
-                  <div>
-                    <h3>Take the quick quiz</h3>
-                    <p>Five myth-or-fact questions — try them right here on this page, in the extras below — then, in the full planner, four simple questions about your situation turn your answers into a clear answer: what you need, and why it can't wait.</p>
-                  </div>
-                </div>
-                <div class="app-feat">
-                  <div class="svc-num" aria-hidden="true">02</div>
-                  <div>
-                    <h3>See your coverage gap</h3>
-                    <p>Add up what a funeral really costs — burial or cremation — set it against what you already have, and see the gap your family would be left to cover.</p>
-                  </div>
-                </div>
-                <div class="app-feat">
-                  <div class="svc-num" aria-hidden="true">03</div>
-                  <div>
-                    <h3>For younger families, too</h3>
-                    <p>Under 45 with a mortgage and people counting on your paycheck? There's a section built on your math — and why coverage costs the least at your age.</p>
-                  </div>
-                </div>
-                <div class="app-feat">
-                  <div class="svc-num" aria-hidden="true">04</div>
-                  <div>
-                    <h3>Leave a wishes page your family can find</h3>
-                    <p>Write down your wishes, the memories and photos you want to be remembered by, and who should be at your service — then print it and put it where your family will find it.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="app-ctas">
-                <a class="btn" href="https://planner.sglifeinsurance.com" target="_blank" rel="noopener">Open the free planner →</a>
-                <a class="btn ghost" href="tel:+17023474536" target="_blank" rel="noopener">Call (702) 347-4536</a>
-                <span class="app-free">Free · Works on your phone · Takes about two minutes</span>
-              </div>
-            </div>
-          </div>
-          <div class="planner-app" id="planner-tools">
-            <div class="pa-card" style="margin-top:22px">
-              <span class="step-badge">The planner, right here</span>
-              <h2>Five simple steps — in plain words</h2>
-              <p class="pa-lede">This is the same Final Expense Planner, brought onto this page. Do the steps in order, one at a time. Each step opens when you tap it, starts by saying what it is and why it matters, and ends with a short note on why it matters — then the call button. You do not have to finish everything today. One step done is real progress. Everything you type here stays on your own phone or computer — nothing is sent anywhere.</p>
-              <div class="pa-toolbar">
-                <select id="paStateSel" aria-label="Your state">
-                  <option value="">Your state…</option>
-                  <option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
-                </select>
-                <select id="paPlanSel" aria-label="Who are you planning for?">
-                  <option value="self">Planning for: Myself</option>
-                  <option value="parent">Planning for: My parent</option>
-                  <option value="spouse">Planning for: My spouse</option>
-                </select>
-              </div>
-              <div class="pa-state-note" id="paStateNote" hidden></div>
-              <ol class="steps-list">
-                <li><span class="st">Step 1</span> · <a href="#paStep1">See where your family stands</a> — a quick score shows what is already in place, and what is still missing</li>
-                <li><span class="st">Step 2</span> · <a href="#paStep2">Add up what it would cost</a> — what a funeral or cremation really costs, in real numbers</li>
-                <li><span class="st">Step 3</span> · <a href="#paStep3">Check a policy you already have</a> — only if you already have one. If you don't, skip this step</li>
-                <li><span class="st">Step 4</span> · <a href="#paStep4">Write down your wishes</a> — what you want, in writing, so nobody has to guess</li>
-                <li><span class="st">Step 5</span> · <a href="#paStep5">Get ready for your call</a> — one short list that makes your call quick and easy</li>
-              </ol>
-              <p class="pa-lede" style="margin:14px 0 0">Simple and straightforward — no doctor visits, no medical exams, no bloodwork. Just a few health questions on a short call. <strong>No-pressure promise:</strong> no spam, no robocalls, no obligation. If you call, you reach Christopher himself — not a call center, not an assistant. ★ Rated 5.0 stars on Google.</p>
-            </div>
-
-            <!-- STEP 1 -->
-            <div class="pa-fold step-fold" id="paStep1">
-              <button type="button" class="pa-fold-toggle" aria-expanded="true" aria-controls="paStep1Body"><span class="ft-wrap">Step 1 · See where your family stands<span class="ft-sub">A quick score — what is already in place, and what is still missing</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paStep1Body">
-                <p class="step-open">This step shows what your family already has in place — and what is still missing — so you know what to fix first.</p>
-                <h2>Family Protection Score</h2>
-                <p class="pa-lede">Tap each thing your family truly has in place. Your score adds up as you go. There are no wrong answers — this just shows you where to start.</p>
-                <div style="text-align:center;font-weight:700;color:var(--ink-soft)">Your score</div>
-                <div class="pa-score-big"><span id="paScore">0</span> / 100</div>
-                <div class="pa-progress" aria-hidden="true"><div id="paScoreBar"></div></div>
-                <div id="paScoreList">
-                  <button type="button" class="pa-check" aria-pressed="false" data-pts="25" data-label="Ran my numbers in the calculator"><span class="box" aria-hidden="true"></span><span>Ran my numbers in the calculator<small>Step 2, below</small></span><span class="pts">25 pts</span></button>
-                  <button type="button" class="pa-check" aria-pressed="false" data-pts="25" data-label="Wrote down my final wishes"><span class="box" aria-hidden="true"></span><span>Wrote down my final wishes<small>Step 4, below</small></span><span class="pts">25 pts</span></button>
-                  <button type="button" class="pa-check" aria-pressed="false" data-pts="20" data-label="My family knows where my policy and papers are"><span class="box" aria-hidden="true"></span><span>My family knows where my policy and papers are</span><span class="pts">20 pts</span></button>
-                  <button type="button" class="pa-check" aria-pressed="false" data-pts="15" data-label="My beneficiaries are up to date"><span class="box" aria-hidden="true"></span><span>My beneficiaries are up to date</span><span class="pts">15 pts</span></button>
-                  <button type="button" class="pa-check" aria-pressed="false" data-pts="15" data-label="I have coverage that covers my gap"><span class="box" aria-hidden="true"></span><span>I have coverage that covers my gap</span><span class="pts">15 pts</span></button>
-                </div>
-                <div class="pa-badge" id="paScoreBadge"><div class="bigtxt">Family Protected: 100</div><p style="margin:8px 0 0">Every item tapped — your family knows the plan, the papers, and the coverage. That's a real gift to them.</p></div>
-                <div id="paScoreBelow"><p style="font-weight:700;margin:16px 0 0">Still to do:</p><ul id="paScoreMissing" style="margin:8px 0 0;padding-left:22px"></ul></div>
-                <div class="pa-close">
-                  <p class="close-recap">Why this matters: every item you tapped is one less problem your family has to solve in a hard week.</p>
-                  <p class="close-why">The ones still open can be finished now, calmly — and a short call with Christopher can help you finish the rest.</p>
-                  <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">Call 702-347-4536</a>
-                  <p class="pa-close-note">Free review · About 10 minutes · Christopher answers his own phone</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- STEP 2 -->
-            <div class="pa-fold step-fold" id="paStep2">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paStep2Body"><span class="ft-wrap">Step 2 · Add up what it would cost<span class="ft-sub">What a funeral or cremation really costs — in real numbers, not guesses</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paStep2Body" hidden>
-                <p class="step-open">This step adds up what a funeral or cremation really costs, so the bill never catches your family short. The bill always comes within a few days of a death — this is how you know it is covered.</p>
-                <h2>What would it actually cost?</h2>
-                <p class="pa-lede">Add up the real costs below, one line at a time. Change any number to match what you want — the totals add up as you type. The starting numbers are typical costs, so you can leave them as they are if you are not sure.</p>
-                <div class="pa-toggle" role="group" aria-label="Burial or cremation">
-                  <button type="button" id="paBtnBurial" aria-pressed="true">Burial</button>
-                  <button type="button" id="paBtnCremation" aria-pressed="false">Cremation</button>
-                </div>
-                <div id="paCalcRows">
-                  <div class="pa-row"><div><label for="pa-f-services">Funeral home services &amp; ceremony</label><span class="pa-hint">Typical $2,500 – $6,000</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-services" value="3500"></div></div>
-                  <div class="pa-row pa-burial-only"><div><label for="pa-f-casket">Casket</label><span class="pa-hint">Typical $2,000 – $6,000</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-casket" value="3500"></div></div>
-                  <div class="pa-row pa-burial-only"><div><label for="pa-f-plot">Burial plot</label><span class="pa-hint">Typical $2,000 – $8,000</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-plot" value="4000"></div></div>
-                  <div class="pa-row pa-burial-only"><div><label for="pa-f-vault">Burial vault</label><span class="pa-hint">Typical $1,000 – $3,000 · Most cemeteries require one</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-vault" value="1500"></div></div>
-                  <div class="pa-row pa-burial-only"><div><label for="pa-f-stone">Headstone or marker</label><span class="pa-hint">Typical $1,000 – $4,000</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-stone" value="2000"></div></div>
-                  <div class="pa-row pa-burial-only"><div><label for="pa-f-open">Grave opening &amp; closing</label><span class="pa-hint">Typical $1,000 – $2,500</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-open" value="1500"></div></div>
-                  <div class="pa-row pa-cremation-only" hidden><div><label for="pa-f-cremfee">Cremation fee</label><span class="pa-hint">Typical $1,000 – $3,000</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-cremfee" value="2000"></div></div>
-                  <div class="pa-row pa-cremation-only" hidden><div><label for="pa-f-urn">Urn</label><span class="pa-hint">Typical $50 – $500</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-urn" value="250"></div></div>
-                  <div class="pa-row"><div><label for="pa-f-flowers">Flowers, obituary &amp; death certificates</label><span class="pa-hint">Typical $500 – $1,500</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-flowers" value="800"></div></div>
-                  <div class="pa-row"><div><label for="pa-f-medical">Final medical bills</label><span class="pa-hint">Any bills you expect to remain</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-medical" value="0"></div></div>
-                  <div class="pa-row"><div><label for="pa-f-debts">Debts to clear</label><span class="pa-hint">Cards, loans, or other balances</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-debts" value="0"></div></div>
-                  <div class="pa-row"><div><label for="pa-f-cushion">A cushion for the family</label><span class="pa-hint">Extra to help loved ones through the first months</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-cushion" value="0"></div></div>
-                </div>
-
-                <div class="pa-fold pa-fold-in">
-                  <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paLegacyBody"><span class="ft-wrap">Leave money behind for loved ones<span class="ft-sub">Extra for your spouse, children, or a cause — on top of the funeral costs</span></span><span class="chev" aria-hidden="true">▾</span></button>
-                  <div class="pa-fold-body" id="paLegacyBody" hidden>
-                    <div class="pa-legacy">
-                      <h3>Leave Them More Than the Bill</h3>
-                      <p style="margin:0 0 6px">How much extra — on top of final expenses — do you want to leave for the people you love? Coverage isn't just paying the last bill — it's the last gift you ever give them.</p>
-                      <div class="pa-row" style="border-bottom:none;padding-bottom:4px"><div><label for="pa-l-monthly">Monthly amount for my spouse</label></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-l-monthly" value="0"></div></div>
-                      <label for="pa-l-years" style="font-weight:700;display:block;margin-top:8px">For how many years? <span id="pa-l-years-val" style="color:var(--emerald)">3 years</span></label>
-                      <input type="range" class="pa-slider" id="pa-l-years" min="1" max="10" step="1" value="3" aria-label="Years of spouse support">
-                      <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:var(--ink-soft);font-weight:700"><span>1 year</span><span>10 years</span></div>
-                      <div style="font-weight:800;color:var(--emerald);margin-top:6px">Spouse support: <span id="pa-l-spouse-sub">$0</span></div>
-                      <div class="pa-row"><div><label for="pa-l-kids">For children &amp; grandchildren — a head start</label><span class="pa-hint">Education, a first home, or clearing a debt for them</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-l-kids" value="0"></div></div>
-                      <div class="pa-row"><div><label for="pa-l-charity">Church or charity gift</label><span class="pa-hint">One last gift to a cause close to your heart</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-l-charity" value="0"></div></div>
-                      <div class="pa-legacy-total"><span>Total you want to leave behind</span><span class="amt" id="pa-l-total">$0</span></div>
-                      <p style="font-size:0.92rem;color:var(--ink-soft);margin:10px 0 0">This legacy total adds on top of your final expenses — together they make your total need, and the gap below updates live. The official beneficiary names live on the policy itself, and Christopher confirms them with you when your coverage is set up.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 class="sub" style="font-size:1.25rem;margin:22px 0 4px">What you already have</h3>
-                <div class="pa-row"><div><label for="pa-f-insurance">Life insurance you already have</label></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-insurance" value="0"></div></div>
-                <div class="pa-row"><div><label for="pa-f-savings">Savings set aside for this</label></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-f-savings" value="0"></div></div>
-
-                <div class="pa-result" aria-live="polite">
-                  <div class="line"><span>Final expenses</span><strong id="pa-r-final">$16,800</strong></div>
-                  <div class="line"><span>Legacy you want to leave</span><strong id="pa-r-legacy">$0</strong></div>
-                  <div class="line"><span>Total need</span><strong id="pa-r-total">$16,800</strong></div>
-                  <div class="line"><span>What you already have</span><strong id="pa-r-have">$0</strong></div>
-                  <div class="gap-label">The gap your family would face</div>
-                  <div class="gap" id="pa-r-gap">$16,800</div>
-                  <div class="covered" id="pa-r-covered" hidden>You're covered on paper — but prices rise and policies change. A free review takes about 10 minutes.</div>
-                </div>
-                <p style="text-align:center;margin:16px 0 0">One thing worth knowing: the cost of coverage is based on your age and health — so the least expensive day to lock it in is today. Every year you wait, it costs more, and a change in health can close the door entirely.</p>
-
-                <div class="pa-fold pa-fold-in">
-                  <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paWaitBody"><span class="ft-wrap">The cost of waiting<span class="ft-sub">Move the slider and watch the same funeral cost more later</span></span><span class="chev" aria-hidden="true">▾</span></button>
-                  <div class="pa-fold-body" id="paWaitBody" hidden>
-                    <p class="pa-lede">The biggest cost of waiting isn't the funeral bill — it's <strong>you</strong>. Coverage is priced on your age and health on the day you apply. Funeral prices creep up too, by a smaller margin — drag the slider to see that part.</p>
-                    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><label for="pa-w-age" style="font-weight:800;margin:0">Your age today</label><input type="number" id="pa-w-age" min="30" max="90" value="62" style="width:90px;padding:10px;border:2px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);text-align:center;font-size:1.03rem;font-family:inherit;min-height:48px"><span style="color:var(--ink-soft);font-size:0.95rem">Change it to your real age — the math updates.</span></div>
-                    <label for="pa-w-slider" style="font-weight:800;display:block;margin-bottom:6px">Cover me at age… <span id="pa-w-sliderVal" style="color:var(--emerald)">75</span></label>
-                    <input type="range" class="pa-slider" id="pa-w-slider" min="50" max="85" step="1" value="75" aria-label="Age the funeral happens">
-                    <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:var(--ink-soft);font-weight:700"><span>Age 50</span><span>Age 85</span></div>
-                    <div class="pa-wait-compare" aria-live="polite">
-                      <div class="pa-wait-box"><div class="w-label">If it happened today · Age <span id="pa-w-todayLbl">62</span></div><div class="w-amt" id="pa-w-today">$16,800</div><div style="font-size:0.9rem;color:var(--ink-soft)">Your total from the calculator above</div></div>
-                      <div class="pa-wait-box future"><div class="w-label">At age <span id="pa-w-futureLbl">75</span> · <span id="pa-w-yearsLbl">13 years later</span></div><div class="w-amt" id="pa-w-future">$24,659</div><div style="font-size:0.9rem;color:var(--ink-soft)">Same funeral, later date</div></div>
-                    </div>
-                    <div aria-hidden="true"><div style="font-size:0.85rem;font-weight:700;margin-bottom:4px">Today</div><div class="pa-bar-bg"><div class="pa-bar-fill" id="pa-w-barToday" style="width:68%"></div></div><div style="font-size:0.85rem;font-weight:700;margin-bottom:4px">Later</div><div class="pa-bar-bg"><div class="pa-bar-fill future" id="pa-w-barFuture" style="width:100%"></div></div></div>
-                    <p style="text-align:center;font-weight:800;font-size:1.05rem;margin:10px 0 0" id="pa-w-diff">That's $7,859 more for the exact same funeral — the small cost of waiting.</p>
-                    <p class="pa-assump"><strong>Assumption, clearly labeled:</strong> funeral costs growing at about <strong>3% a year</strong> — the long-run pattern for funeral costs. This is a planning illustration, not a quote or guarantee. The bigger part never shows on a chart: the monthly amount you'd pay is set by your age and health when you apply, and it only moves one way.</p>
-                  </div>
-                </div>
-
-                <div class="pa-fold pa-fold-in">
-                  <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paYoungBody"><span class="ft-wrap">For younger families<span class="ft-sub">Protecting your income, your mortgage, and the people counting on your paycheck</span></span><span class="chev" aria-hidden="true">▾</span></button>
-                  <div class="pa-fold-body" id="paYoungBody" hidden>
-                    <h2>Could your family keep its life?</h2>
-                    <p class="pa-lede">The funeral bill is only the first bill. The harder question: if one income stopped, could your family keep the life you live now? This is a different kind of math — replacing income and keeping the house.</p>
-                    <div class="pa-row"><div><label for="pa-y-mortgage">Mortgage balance remaining</label><span class="pa-hint">What's still owed on your home</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-y-mortgage" value="0"></div></div>
-                    <div class="pa-row"><div><label for="pa-y-income">Your yearly income</label><span class="pa-hint">Before taxes</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-y-income" value="0"></div></div>
-                    <div class="pa-field" style="margin-top:14px"><label for="pa-y-years">Years of income to protect</label><select id="pa-y-years"><option value="5">5 years</option><option value="10" selected>10 years</option><option value="15">15 years</option><option value="20">20 years</option></select></div>
-                    <div class="pa-row"><div><label for="pa-y-debts">Other debts</label><span class="pa-hint">Car loans, cards, student loans</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-y-debts" value="0"></div></div>
-                    <div class="pa-row"><div><label for="pa-y-have">Coverage you already have</label><span class="pa-hint">Work policy plus any personal policy</span></div><div class="pa-money"><span>$</span><input type="number" inputmode="numeric" min="0" id="pa-y-have" value="0"></div></div>
-                    <div class="pa-result" aria-live="polite">
-                      <div class="line"><span>Protection target</span><strong id="pa-y-target">$0</strong></div>
-                      <div class="line"><span>What you already have</span><strong id="pa-y-haveout">$0</strong></div>
-                      <div class="gap-label">The gap your family would face</div>
-                      <div class="gap" id="pa-y-gap">$0</div>
-                      <div class="covered" id="pa-y-covered" hidden>You're covered on paper — but life changes: a new home, a new baby, a new job. A free review takes about 10 minutes.</div>
-                    </div>
-                    <h3 class="sub" style="font-size:1.22rem;margin:22px 0 4px">Term or permanent — in plain words</h3>
-                    <div class="pa-compare">
-                      <div><h4>Term coverage</h4><p>Protection for a set number of years — often while the mortgage is owed and the kids are growing up. It's usually the lowest-cost way to get a large amount of coverage.</p></div>
-                      <div><h4>Permanent coverage</h4><p>Lasts your whole life, as long as it's kept in force, and can build cash value over time. Families often use it for final expenses and leaving something behind.</p></div>
-                    </div>
-                    <div class="pa-why"><p><strong>Why think about this now?</strong> Life insurance costs are based on age and health — so the cheapest day to lock in coverage is the youngest, healthiest day. That's today.</p><p style="margin:0">A policy started young can protect your mortgage and your kids while it's most affordable — so if something happened to you, your family keeps the home and the life you've built.</p></div>
-                  </div>
-                </div>
-
-                <div class="pa-close">
-                  <p class="close-recap">Why this matters: that gap is what your family would have to find within a few days, on top of everything else.</p>
-                  <p class="close-why">Coverage in place now means the money is simply there for them — paid directly to the person you name, with no borrowing and no fundraising.</p>
-                  <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">Call 702-347-4536</a>
-                  <p class="pa-close-note">Free review · About 10 minutes · Christopher answers his own phone</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- STEP 3 -->
-            <div class="pa-fold step-fold" id="paStep3">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paStep3Body"><span class="ft-wrap">Step 3 · Check a policy you already have<span class="ft-sub">Only if you already have one — if you don't, skip this step</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paStep3Body" hidden>
-                <p class="step-open">Old policies can hide problems — like the wrong person set to receive the money. This step finds those problems while they can still be fixed.</p>
-                <h2>60-Second Policy Checkup</h2>
-                <p class="pa-lede">Answer what you know — it takes about a minute. This checkup looks for the quiet problems Christopher finds most often: the person named to receive the money (the “beneficiary”) was never updated, the plan pays only part at first (a “graded” plan) and nobody said so, or the amount no longer covers today's costs.</p>
-                <div class="pa-field"><label for="pa-pc-type">What kind of policy is it?</label><select id="pa-pc-type"><option value="">— Choose one (optional) —</option><option value="whole">Whole life</option><option value="term">Term</option><option value="unknown">Don't know</option></select></div>
-                <div class="pa-field"><label for="pa-pc-amount">Amount of coverage</label><input type="number" id="pa-pc-amount" inputmode="numeric" min="0" placeholder="e.g., 10000"></div>
-                <div class="pa-field"><label for="pa-pc-graded">Is yours graded or level?</label><select id="pa-pc-graded"><option value="">— Choose one (optional) —</option><option value="level">Level — full amount from day one</option><option value="graded">Graded — has a waiting period</option><option value="unknown">Don't know</option></select><span class="pa-hint">Level pays the full amount from day one. Graded pays only part during a waiting period, usually the first two years.</span></div>
-                <div class="pa-field"><label>Has life changed since you bought it? Tap all that apply:</label><div class="pa-chips" id="paPcChips"><button type="button" aria-pressed="false">Got married</button><button type="button" aria-pressed="false">Divorced</button><button type="button" aria-pressed="false">Remarried</button><button type="button" aria-pressed="false">Had a child or grandchild</button><button type="button" aria-pressed="false">Lost a spouse</button><button type="button" aria-pressed="false">Changed jobs</button><button type="button" aria-pressed="false">Moved</button></div></div>
-                <div class="pa-field"><label for="pa-pc-reviewed">When was it last reviewed?</label><select id="pa-pc-reviewed"><option value="">— Choose one (optional) —</option><option value="never">Never</option><option value="over3">Over 3 years ago</option><option value="within3">Within the last 3 years</option></select></div>
-                <div id="paPcFlags" aria-live="polite"><p class="pa-ok">Answer the questions above and your flags will appear here — the things worth a second look.</p></div>
-                <div class="pa-close">
-                  <p class="close-recap">Why this matters: a policy only protects your family if its details are right — the right person named to receive the money, and the full amount paid when it counts.</p>
-                  <p class="close-why">Checking yours now means no surprises for them later.</p>
-                  <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">Call 702-347-4536</a>
-                  <p class="pa-close-note">Free review · About 10 minutes · Christopher answers his own phone</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="pa-fold step-fold" id="paStep4">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paStep4Body"><span class="ft-wrap">Step 4 · Write down your wishes<span class="ft-sub">What you want for your service — in writing, so nobody has to guess</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paStep4Body" hidden>
-                <p class="step-open">If your wishes live only in your head, your family has to guess at the hardest moment. This step puts them in writing — what you want, where things are, and who to call first.</p>
-                <h2>Leave instructions, not questions</h2>
-                <p class="pa-lede">The full wishes form lives in the free planner — burial or cremation, funeral home, type of service, favorite songs and readings, where your documents are kept, the first person to call, your story in your words, the memories and photos you want shared, who should be invited, a plan for your pets, a letter to your family, and your digital legacy (account names only — never passwords). Open it, fill in as much or as little as you like, and keep the sheet where your family will find it.</p>
-                <ul class="pa-plain-list">
-                  <li><span><strong>My Final Wishes</strong> — your service, your music, your way, written down</span></li>
-                  <li><span><strong>Your story, in your words</strong> — where you grew up, your family, your work, your proudest moments</span></li>
-                  <li><span><strong>Where everything is</strong> — documents, policies, and the first person to call</span></li>
-                  <li><span><strong>Digital legacy</strong> — which accounts you have and what should happen to each (never passwords)</span></li>
-                  <li><span><strong>A plan for your pets</strong> — who takes them, and what they need</span></li>
-                </ul>
-                <p style="text-align:center;margin:18px 0 0"><a class="btn ghost" href="https://planner.sglifeinsurance.com" target="_blank" rel="noopener">Open the full wishes form in the free planner →</a></p>
-                <div class="pa-close">
-                  <p class="close-recap">Why this matters: written wishes turn the hardest week into a week of following your instructions — not guessing at them.</p>
-                  <p class="close-why">It spares your family arguments, second-guessing, and decisions made under grief that can't be taken back.</p>
-                  <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">Call 702-347-4536</a>
-                  <p class="pa-close-note">Free review · About 10 minutes · Christopher answers his own phone</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- STEP 5 -->
-            <div class="pa-fold step-fold" id="paStep5">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paStep5Body"><span class="ft-wrap">Step 5 · Get ready for your call<span class="ft-sub">One short list that makes your call with Christopher quick and easy</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paStep5Body" hidden>
-                <p class="step-open">A little preparation makes the call short and useful — Christopher can give you real answers instead of general ones.</p>
-                <h2>Get ready for your call</h2>
-                <p class="pa-lede">Have these nearby when you call. Nothing here gets sent anywhere — it's a list for you, so the conversation is easy.</p>
-                <ul class="pa-plain-list">
-                  <li><span><strong>Your medications</strong> — name and what each one is for, nothing more</span></li>
-                  <li><span><strong>Your basics</strong> — age, height, weight, and whether you use tobacco</span></li>
-                  <li><span><strong>A health snapshot</strong> — the main conditions Christopher should know about</span></li>
-                  <li><span><strong>Your doctor</strong> — name and state</span></li>
-                  <li><span><strong>Your numbers from Step 2</strong> — your total need and your gap</span></li>
-                  <li><span><strong>Any policy you already have</strong> — company name and amount, if you have it handy</span></li>
-                </ul>
-                <div class="pa-close">
-                  <p class="close-recap">Why this matters: with these in hand, one short call can put real coverage in place — no follow-up homework, no guessing about your health.</p>
-                  <p class="close-why">And because coverage is priced by age and health on the day you apply, the call you make today is priced at today's age.</p>
-                  <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">Call 702-347-4536</a>
-                  <p class="pa-close-note">Free review · About 10 minutes · Christopher answers his own phone</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FINISH -->
-            <div class="pa-card" id="paSummary">
-              <p style="text-align:center;font-size:0.8rem;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-dark);margin:0 0 6px">Your numbers, on one sheet</p>
-              <h2>My plan summary</h2>
-              <div class="pa-result" style="margin-top:14px" aria-live="polite">
-                <div class="line"><span>Family Protection Score</span><strong><span id="pa-s-score">0</span> / 100</strong></div>
-                <div class="line"><span>Total need (Step 2)</span><strong id="pa-s-total">$16,800</strong></div>
-                <div class="line"><span>What you already have</span><strong id="pa-s-have">$0</strong></div>
-                <div class="gap-label">The gap your family would face</div>
-                <div class="gap" id="pa-s-gap">$16,800</div>
-              </div>
-              <p class="pa-lede" style="margin:14px 0 0">You've seen the need, in your own numbers. The families who act on a day like today are the ones whose hardest week is already handled.</p>
-              <div class="pa-close">
-                <p class="close-recap">Why this matters: this one sheet is the whole plan — what it costs, what you have, and what's missing.</p>
-                <p class="close-why">One call closes the gap while you're at the youngest, healthiest point you'll ever apply from.</p>
-                <a class="btn" href="tel:+17023474536" target="_blank" rel="noopener">Call 702-347-4536</a>
-                <p class="pa-close-note">Free review · About 10 minutes · Christopher answers his own phone</p>
-              </div>
-            </div>
-
-            <h2 style="margin:34px 0 4px">Extra information — read any time</h2>
-            <p class="pa-lede">Stories, common questions, and help for veterans and for the first hard days. Read it whenever you like, in any order. None of it is homework.</p>
-
-            <div class="pa-fold" id="paSpot">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paSpotBody"><span class="ft-wrap">Spot the Gap<span class="ft-sub">Three short stories — see the gap before it's your family's</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paSpotBody" hidden>
-                <h2>Spot the Gap</h2>
-                <div class="pa-story"><h3>The policy that expired</h3><p>A father kept a term policy through work for years and assumed it followed him into retirement. It didn't — it ended with the job. When he passed two years later, his family learned the coverage they counted on was already gone.</p><p class="moral">The lesson: coverage only counts if it's still in force on the day it's needed. Permanent coverage doesn't expire.</p></div>
-                <div class="pa-story"><h3>The amount that stopped keeping up</h3><p>A mother bought $10,000 of coverage in the 1990s, when it covered a full funeral. By the time her family needed it, the same service cost far more — and her children covered the difference themselves, in the same week they buried her.</p><p class="moral">The lesson: an amount that was right once may not be right now. That's what Step 2 is for.</p></div>
-                <div class="pa-story"><h3>The beneficiary nobody updated</h3><p>After a divorce and remarriage, one man's policy still named his first wife. The money went where the paperwork said — not where he would have wanted. His family couldn't change it after the fact.</p><p class="moral">The lesson: the beneficiary on the policy is the plan. That's what Step 3 checks.</p></div>
-              </div>
-            </div>
-
-            <div class="pa-fold" id="paQuiz">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paQuizBody"><span class="ft-wrap">The Myth-or-Fact Quiz<span class="ft-sub">Five questions — two minutes — learn what most families get wrong</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paQuizBody" hidden>
-                <h2>Not sure what you actually need? Start here</h2>
-                <div style="font-size:0.9rem;color:var(--ink-soft);font-weight:700;text-align:center" id="paQuizStep">Question 1 of 5</div>
-                <div class="pa-progress" aria-hidden="true"><div id="paQuizBar"></div></div>
-                <p class="pa-quiz-q" id="paQuizQ"></p>
-                <div class="pa-opt-list" id="paQuizAnswers"></div>
-                <div class="pa-lesson" id="paQuizLesson" aria-live="polite"></div>
-                <button type="button" class="pa-next" id="paQuizNext" hidden>Next →</button>
-                <div id="paQuizDone" hidden style="text-align:center"><p style="font-weight:800;font-size:1.1rem">That's the quiz — now you know more than most families do when they start.</p><p>The next step is your own numbers, in Step 2 above.</p></div>
-              </div>
-            </div>
-
-            <div class="pa-fold" id="paMeeting">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paMeetingBody"><span class="ft-wrap">How to have the talk with family<span class="ft-sub">A short guide to the family meeting — who, where, and what to cover</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paMeetingBody" hidden>
-                <h2>How to Have the Talk</h2>
-                <p class="pa-lede">The talk is easier before it's urgent. Pick a calm moment — not a holiday, not a hospital — and keep it practical: this is about where things are and what you want, not about dying.</p>
-                <ul class="pa-plain-list">
-                  <li><span><strong>Say where the papers are</strong> — policy, wishes sheet, and important documents</span></li>
-                  <li><span><strong>Say what you want</strong> — burial or cremation, the kind of service, in your own words</span></li>
-                  <li><span><strong>Say who to call first</strong> — one name, one number</span></li>
-                  <li><span><strong>Say what's covered</strong> — what coverage is in place, and what it pays for</span></li>
-                  <li><span><strong>Write it down afterward</strong> — Step 4 turns the talk into instructions</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="pa-fold" id="paFirst48">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paFirst48Body"><span class="ft-wrap">The First 48 Hours<span class="ft-sub">For families — a step-by-step guide for when the day comes</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paFirst48Body" hidden>
-                <p style="text-align:center;font-size:0.8rem;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-dark);margin:0 0 6px">For families · When the day comes</p>
-                <h2>The First 48 Hours</h2>
-                <ul class="pa-plain-list">
-                  <li><span><strong>Call the first person on the wishes sheet</strong> — and the funeral home named there</span></li>
-                  <li><span><strong>Find the wishes sheet and the policy</strong> — they're kept together, where Step 4 said</span></li>
-                  <li><span><strong>Notify close family</strong> — one person can make the calls so nobody hears it secondhand</span></li>
-                  <li><span><strong>Order several certified death certificates</strong> — through the funeral home; banks and insurers each need one</span></li>
-                  <li><span><strong>Call the insurance company — or Christopher</strong> — to start the claim; coverage is paid directly to the beneficiary</span></li>
-                  <li><span><strong>Don't rush big decisions</strong> — the first two days are for family and the service, not paperwork</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="pa-fold" id="paSSVet">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paSSVetBody"><span class="ft-wrap">Social Security &amp; veterans<span class="ft-sub">What's already there — and what it doesn't cover</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paSSVetBody" hidden>
-                <h2>Social Security Survivor Benefits</h2>
-                <p class="pa-lede">A surviving spouse may be able to claim survivor benefits based on the deceased spouse's record — generally the larger of the two benefits continues, and the smaller stops. That change alone is why so many widows and widowers feel an income drop in the first year. Social Security also pays a one-time death benefit of $255 to an eligible surviving spouse. It helps — it does not cover a funeral.</p>
-                <h2 style="margin-top:26px">What the VA Actually Covers</h2>
-                <p class="pa-lede">Eligible veterans can be buried in a national or state veterans cemetery at no cost — the plot, opening and closing, a headstone or marker, and perpetual care. What the VA does not pay for is the funeral itself: the funeral home's services, the casket, and transportation are the family's cost. A burial allowance exists for some veterans, but it is limited and eligibility-based — ask Christopher to walk through your situation on the call.</p>
-              </div>
-            </div>
-
-            <div class="pa-fold" id="paDocs">
-              <button type="button" class="pa-fold-toggle" aria-expanded="false" aria-controls="paDocsBody"><span class="ft-wrap">Four Documents Every Family Needs<span class="ft-sub">Beyond coverage — the papers that make everything else work</span></span><span class="chev" aria-hidden="true">▾</span></button>
-              <div class="pa-fold-body" id="paDocsBody" hidden>
-                <p style="text-align:center;font-size:0.8rem;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-dark);margin:0 0 6px">Beyond coverage</p>
-                <h2>Four Documents Every Family Needs</h2>
-                <ul class="pa-plain-list">
-                  <li><span><strong>A will</strong> — says who gets what, and who settles things</span></li>
-                  <li><span><strong>A healthcare directive</strong> — your medical wishes, and who may speak for you</span></li>
-                  <li><span><strong>A durable power of attorney</strong> — who may handle money and bills if you can't</span></li>
-                  <li><span><strong>Up-to-date beneficiaries</strong> — on every policy and account; these override a will</span></li>
-                </ul>
-                <p class="pa-lede" style="margin:14px 0 0">And one index page that ties it together: where every document, account, and policy lives, so your family isn't searching. The full planner has a “Where Everything Lives” page for exactly that.</p>
-              </div>
-            </div>
-
-            <div class="pa-card pa-today" id="paToday">
-              <p style="font-size:0.8rem;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-dark);margin:0 0 6px">One thing today</p>
-              <p class="pa-today-action" id="paTodayAction">Write one memory you want shared.</p>
-              <p style="font-weight:800;color:var(--emerald);margin:0 0 12px">One small step · About two minutes</p>
-              <p style="margin:0">A different small step each day — each one is a small piece of the five steps, done a little at a time. Today's step is the one above.</p>
-              <p style="text-align:center;margin:16px 0 0"><a class="btn ghost" href="#paStep1">Start with Step 1 — see where your family stands →</a></p>
-            </div>
-
-            <div class="pa-card pa-ref-card" id="paReferral">
-              <p style="text-align:center;font-size:0.8rem;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-dark);margin:0 0 6px">Optional · Bonus game</p>
-              <h2>The Referral Game</h2>
-              <p class="pa-lede">Know someone who needs this conversation? For each person you refer who becomes a client, you can earn $500 of free accidental coverage — up to 10 referrals, $5,000 total. Details and eligibility are confirmed with Christopher directly.</p>
-              <div class="pa-ref-meter" aria-hidden="true"><p class="m-label">Free accidental coverage you could earn</p><div class="m-amt" id="paRefAmt">$0</div><p style="margin:0">Tap the referrals below to see it add up — $500 at a time</p><div class="m-bar-bg"><div class="m-bar-fill" id="paRefBar"></div></div></div>
-              <div class="pa-chips" id="paRefChips" style="justify-content:center"></div>
-              <a class="pa-ref-claim" href="tel:+17023474536" target="_blank" rel="noopener">Claim my free coverage — call 702-347-4536</a>
-              <p style="font-size:0.88rem;color:var(--ink-soft);margin:12px 0 0;line-height:1.5;text-align:center">Referral coverage is accidental coverage offered through Christopher's company; who qualifies and how it is issued are confirmed on the call.</p>
-            </div>
-          </div>
+          <p class="kicker">The Free Final Expense Planner</p>
+          <h2>Plan it in two minutes — free</h2>
+          <p class="lede">My free online planner walks through the same numbers I go over on a call:</p>
+          <ul>
+            <li><strong>See your gap</strong> — what a funeral really costs vs. what you already have</li>
+            <li><strong>Write your wishes down</strong> where your family can find them</li>
+            <li><strong>Leave a one-sheet plan</strong> they can actually use</li>
+          </ul>
+          <p>No sign-up, nothing to buy, and nothing you type leaves your phone.</p>
+          <p><a class="btn" href="https://planner.sglifeinsurance.com">Open the free planner</a></p>
+          <p>Prefer paper? <a href="shop.html">The printable planner is in the shop →</a></p>
         </div>
       </section>
 
       <!-- FINAL WISHES PLANNER -->
       <section class="block" id="planner" style="padding-top: 10px;">
         <div class="wrap">
-          <div class="planner-card">
-            <div class="planner-main">
-              <p class="kicker">Final Wishes Planner</p>
-              <h2>Put your wishes in writing — before your family has to guess</h2>
-              <p>A policy pays the bill, but it doesn't tell your family what you wanted. This planner does — it's the printable companion to the free online Final Expense Planner. Fill it in once, keep it somewhere they'll find it, and the hardest week of their lives gets a little easier.</p>
-              <ul class="planner-contents">
-                <li><span><strong>My Final Wishes</strong> — your service, your music, your way, written down</span></li>
-                <li><span><strong>Funeral Cost Worksheet</strong> — the real numbers, planned ahead instead of guessed at</span></li>
-                <li><span><strong>Where Everything Is</strong> — accounts, documents, and passwords' locations in one place</span></li>
-                <li><span><strong>Insurance &amp; Benefits</strong> — every policy and benefit your family should claim</span></li>
-                <li><span><strong>Letters to Loved Ones</strong> — space to leave the words that matter most</span></li>
-                <li><span><strong>First 48 Hours Checklist</strong> — a step-by-step guide for your family when the time comes</span></li>
-              </ul>
-            </div>
-            <div class="planner-buy">
-              <p class="planner-price">$12.99 (was $19.99)</p>
-              <p class="planner-format">Printable planner · PDF download</p>
-              <p>The printable companion to the free online Final Expense Planner — made for paper, so your wishes are there when your family needs them.</p>
-              <p class="planner-points">25 pages · Print it and fill it in by hand, or complete it on your computer or tablet · One purchase covers your whole household — print extra copies for your family · Large, easy-to-read type · Includes the First 48 Hours checklist for your family</p>
-              <a class="btn" href="https://buy.sglifeinsurance.com" target="_blank" rel="noopener noreferrer">Buy the discounted planner now!</a>
-              <p class="planner-note">Delivered by email after checkout. Prefer to order by phone? Call (702) 347-4536.</p>
-              <p class="planner-note" style="margin-top:14px">Want it as a keepsake binder? <a href="https://www.etsy.com/listing/4623625251/legacy-edition-final-wishes-binder-made" target="_blank" rel="noopener noreferrer">Order the Legacy Edition binder now — $79.99, free shipping</a></p>
-              <p class="planner-note"><a href="https://www.etsy.com/shop/SometimesTomorrow" target="_blank" rel="noopener noreferrer">Memorial Keepsakes — limited-time offers</a> — pet memorial books, memorial templates &amp; more</p>
-            </div>
-          </div>
+          <p class="kicker">Prefer It On Paper?</p>
+          <h2>The printable planner lives in the shop</h2>
+          <p>The printable Final Wishes Planner — the same plan in a keepsake edition you fill in by hand and keep where your family will find it — is in my shop, alongside the binders and kits that match it.</p>
+          <p><a href="shop.html">See it in the shop →</a></p>
         </div>
       </section>
 
       <!-- FAQ -->
+      <section class="block" id="cost-band" style="padding-top: 10px;">
+        <div class="wrap">
+          <p class="kicker">The Real Numbers</p>
+          <h2>What a funeral actually costs in Las Vegas</h2>
+          <p class="lede">$14,000 to $19,000 all-in for a traditional burial, once the cemetery, vault, and headstone are added. Cremation costs less — still thousands. And the bill arrives within days, before services take place.</p>
+          <p><a href="blog/funeral-costs-las-vegas.html">See the full breakdown, line by line →</a></p>
+        </div>
+      </section>
       <section class="block" id="faq" style="padding-top: 10px;">
         <div class="wrap faq-wrap">
           <p class="kicker">Common questions</p>
@@ -1205,6 +845,22 @@ section.block h2::after{margin-left:14px}
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">Who will I actually be talking to?<span class="chev" aria-hidden="true">+</span></button>
             <div class="faq-a"><p>Me. I'm a one-person point of contact — I answer my own phone, I write your policy, and I'm the one your family calls if they ever need it. That's the whole point of working with a local broker instead of a 1-800 number.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How much does a funeral cost in Las Vegas?<span class="chev" aria-hidden="true">+</span></button>
+            <div class="faq-a"><p>More than most families expect. Once you add the cemetery plot, burial vault, headstone, and the smaller charges to the funeral home&rsquo;s bill, a traditional burial here commonly totals $14,000 to $19,000 all-in. Cremation costs less, but it is still a bill in the thousands — and it arrives within days, before services take place. I built a free Final Wishes Planner that walks through the real numbers line by line, so you can see your own total before your family ever has to.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I get coverage if I have health problems?<span class="chev" aria-hidden="true">+</span></button>
+            <div class="faq-a"><p>In many cases, yes. Most final expense policies use simplified underwriting — a health questionnaire instead of a medical exam — and there are options designed for people with common health conditions. What you qualify for depends on your age and health history, which is why I review each person&rsquo;s situation individually. A free review costs nothing and tells you exactly where you stand.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Is cremation cheaper than burial?<span class="chev" aria-hidden="true">+</span></button>
+            <div class="faq-a"><p>Yes, cremation generally costs less than a traditional burial, mainly because there is no cemetery plot or burial vault required. But &ldquo;less&rdquo; is not &ldquo;nothing&rdquo; — a funeral with cremation still runs into the thousands. The right choice is the one that matches your wishes and your family&rsquo;s budget, and it is far easier to decide while it is still just information.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What happens if a family has no coverage at all?<span class="chev" aria-hidden="true">+</span></button>
+            <div class="faq-a"><p>The bill does not wait. Funeral homes need payment arrangements before services, Social Security pays a one-time death benefit of only $255, and employer life insurance often takes weeks to process — if it exists at all. So families end up using savings, credit cards, or a fundraiser page during the worst week of their lives. A small policy set up ahead of time is what keeps that week about family instead of money.</p></div>
           </div>
         </div>
       </section>
@@ -1255,73 +911,9 @@ section.block h2::after{margin-left:14px}
       </section>
 
       <!-- HIRING / JOIN THE TEAM -->
-      <section class="block" id="hiring" style="padding-top: 64px; padding-bottom: 64px;">
-        <div class="wrap hiring-grid">
-          <div>
-            <p class="kicker">Hiring · Join the team</p>
-            <h2>Licensed agents: build your business by phone, with a team behind you</h2>
-            <p>I'm <strong>Christopher M. Spruell</strong>, and I'm building a team of licensed agents with SLS who help families put final expense life insurance in place. This is a <strong>phone-based team</strong> — agents sell by phone, working with families across the states they're licensed in, without door-knocking or office visits.</p>
-            <p>If you're licensed — or working on getting licensed — and you want steady support while you build, start with the application below. It takes you straight to my recruiting page, where you can see how the team works and apply.</p>
-            <div class="hiring-points">
-              <div class="hiring-point">
-                <div class="step-n" aria-hidden="true">✓</div>
-                <div>
-                  <h3>Free leads provided</h3>
-                  <p>You don't have to build your business cold. Free leads are provided, so you can spend your time talking with families who need coverage.</p>
-                </div>
-              </div>
-              <div class="hiring-point">
-                <div class="step-n" aria-hidden="true">✓</div>
-                <div>
-                  <h3>One-on-one support training</h3>
-                  <p>Every new agent gets one-on-one support training — you learn the phone process, the products, and how to serve families the right way, with direct support as you get started.</p>
-                </div>
-              </div>
-              <div class="hiring-point">
-                <div class="step-n" aria-hidden="true">✓</div>
-                <div>
-                  <h3>Work by phone</h3>
-                  <p>This is a phone-based final expense team. Agents sell by phone and handle everything remotely — training, families, and follow-up all happen over the phone.</p>
-                </div>
-              </div>
-              <div class="hiring-point">
-                <div class="step-n" aria-hidden="true">✓</div>
-                <div>
-                  <h3>A team that's actively growing</h3>
-                  <p>I'm building this team now, agent by agent. New agents join a team where the person who recruited them is the person who trains and supports them.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="apply-card">
-            <h3>Ready to apply?</h3>
-            <p>Use my official recruiting link to learn more about joining the team and start your application. It goes directly to my SLS recruiting page.</p>
-            <a class="btn" href="https://www.theslsway.com/cspruell" target="_blank" rel="noopener">Apply to join the team →</a>
-            <p class="apply-alt">Prefer to talk first? Call me directly at <a href="tel:+17023474536" target="_blank" rel="noopener">(702) 347-4536</a> — I answer my own phone.</p>
-          </div>
-        </div>
-      </section>
+      
           <!-- FAMILY QUESTIONS -->
-      <section class="block" id="family-questions">
-        <div class="wrap">
-          <p class="kicker">Questions families ask me</p>
-          <h2>Questions Families Ask Me</h2>
-          <div style="height: 22px"></div>
-
-          <h3>How much does a funeral cost in Las Vegas?</h3>
-          <p>More than most families expect. Once you add the cemetery plot, burial vault, headstone, and the smaller charges to the funeral home's bill, a traditional burial here commonly totals $14,000 to $19,000 all-in. Cremation costs less, but it is still a bill in the thousands — and it arrives within days, before services take place. I built a free Final Expense Planner that walks through the real numbers line by line so you can see your own total before your family ever has to.</p>
-          <h3>What is final expense insurance?</h3>
-          <p>It is a small whole life policy designed for one job: paying the funeral bill and final costs quickly, in cash, to your family. Coverage amounts are modest, there is usually no medical exam, and the policy is built to stay in force for life as long as premiums are paid. Your family can use any funeral home they choose — the money goes to them, not to a funeral home contract.</p>
-          <h3>What happens if a family has no coverage at all?</h3>
-          <p>The bill does not wait. Funeral homes need payment arrangements before services, Social Security pays a one-time death benefit of only $255, and employer life insurance often takes weeks to process — if it exists at all. So families end up using savings, credit cards, or a fundraiser page during the worst week of their lives. A small policy set up ahead of time is what keeps that week about family instead of money.</p>
-          <h3>Can I get coverage if I have health problems?</h3>
-          <p>In many cases, yes. Most final expense policies use simplified underwriting — a health questionnaire instead of a medical exam — and there are options designed for people with common health conditions. What you qualify for depends on your age and health history, which is why I review each person's situation individually. A free review costs nothing and tells you exactly where you stand.</p>
-          <h3>Is cremation cheaper than burial in Nevada?</h3>
-          <p>Yes, cremation generally costs less than a traditional burial, mainly because there is no cemetery plot or burial vault required. But "less" is not "nothing" — a funeral with cremation still runs into the thousands. The right choice is the one that matches your wishes and your family's budget, and it is far easier to decide while it is still just information.</p>
-          <h3>Do you offer free policy reviews?</h3>
-          <p>Yes. If you already have a policy — or you are not sure what you have — I will review it with you at no cost and no obligation. Many people discover they are paying for coverage that ends too early, or that they have less than they thought. Knowing exactly what you have is the first step either way.</p>
-        </div>
-      </section>
+      
     </main>
 
     <footer class="site">
@@ -1553,285 +1145,14 @@ section.block h2::after{margin-left:14px}
         });
       })();
     </script>
-      <script>
-      // ---------- Planner tools (brought in from the Final Expense Planner) ----------
-      // Everything typed or tapped here stays in this page, in memory only.
-      (function () {
-        function $(id) { return document.getElementById(id); }
-        function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
-        function num(id) { var v = parseFloat(($(id) || {}).value); return isNaN(v) || v < 0 ? 0 : v; }
-
-        /* Fold-downs */
-        function setFold(btn, open) {
-          var body = $(btn.getAttribute('aria-controls'));
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          if (body) body.hidden = !open;
-        }
-        document.querySelectorAll('.pa-fold-toggle').forEach(function (btn) {
-          btn.addEventListener('click', function () { setFold(btn, btn.getAttribute('aria-expanded') !== 'true'); });
-        });
-        function openFold(id) {
-          var fold = $(id);
-          if (!fold) return;
-          var btn = fold.querySelector(':scope > .pa-fold-toggle');
-          if (btn) setFold(btn, true);
-        }
-        document.querySelectorAll('.steps-list a').forEach(function (a) {
-          a.addEventListener('click', function () { openFold(a.getAttribute('href').slice(1)); });
-        });
-
-        /* State selector — all 50 states; NV / TX / FL get their full notes */
-        var STATES = {
-          NV: { name: 'Nevada', html: '<p><strong>For veterans:</strong> the Southern Nevada Veterans Memorial Cemetery in Boulder City is Nevada\u2019s state veterans cemetery \u2014 burial there is at no cost for eligible veterans.</p><p><strong>Property basics:</strong> Nevada is a community-property state. Most of what a married couple acquires during the marriage belongs to both spouses equally. When one spouse dies, the survivor automatically keeps their half \u2014 the other half passes by will or, without one, by state law.</p><h4>Good to know in Nevada</h4><ul><li>You can put in writing who may make your funeral arrangements \u2014 a signed designation that Nevada funeral homes must honor ahead of the usual next-of-kin order.</li><li>Death certificates are ordered through the funeral home or the Nevada Office of Vital Records. Order several certified copies \u2014 banks and insurers each need one.</li><li>Nevada has no state estate tax and no inheritance tax.</li><li>Nevada offers a faster, simpler probate process for smaller estates.</li></ul>' },
-          TX: { name: 'Texas', html: '<p><strong>For veterans:</strong> Texas State Veterans Cemeteries in Abilene, Corpus Christi, Killeen, and Mission \u2014 plus national cemeteries in Dallas\u2013Fort Worth, Houston, and San Antonio (Fort Sam Houston) \u2014 bury eligible veterans at no cost.</p><p><strong>Property basics:</strong> Texas is a community-property state. Most of what a married couple acquires during the marriage belongs to both spouses equally. When one spouse dies, the survivor automatically keeps their half \u2014 the other half passes by will or, without one, by state law.</p><h4>Good to know in Texas</h4><ul><li>Texas law lets you name, in writing, the person who may control your funeral arrangements \u2014 that designation comes ahead of the standard next-of-kin order.</li><li>Death certificates are ordered through the funeral home or Texas Vital Statistics. Order several certified copies \u2014 banks and insurers each need one.</li><li>Texas has no state estate tax and no inheritance tax.</li><li>Texas probate is known for being comparatively streamlined when a will names an independent executor.</li></ul>' },
-          FL: { name: 'Florida', html: '<p><strong>For veterans:</strong> Florida National Cemetery in Bushnell and Sarasota National Cemetery bury eligible veterans at no cost.</p><p><strong>Property basics:</strong> Florida is not a community-property state. Instead, Florida\u2019s homestead protections for a surviving spouse are among the strongest in the country: your primary home gets special protection, and it generally can\u2019t be willed away from a surviving spouse or minor children.</p><h4>Good to know in Florida</h4><ul><li>Florida law sets a priority order for who may make funeral arrangements \u2014 and a person you name in writing comes first.</li><li>Death certificates are ordered through the funeral home or the Florida Bureau of Vital Statistics. Order several certified copies \u2014 banks and insurers each need one.</li><li>Florida has no state estate tax and no inheritance tax.</li><li>Because the homestead rules are so specific, Florida families who own a home should review their will and their beneficiaries together.</li></ul>' }
-        };
-        var stateSel = $('paStateSel'), stateNote = $('paStateNote');
-        if (stateSel && stateNote) {
-          stateSel.addEventListener('change', function () {
-            var v = stateSel.value;
-            if (!v) { stateNote.hidden = true; stateNote.innerHTML = ''; return; }
-            stateNote.hidden = false;
-            if (STATES[v]) { stateNote.innerHTML = '<strong>Your state: ' + STATES[v].name + '</strong>' + STATES[v].html; }
-            else {
-              var opt = stateSel.options[stateSel.selectedIndex];
-              stateNote.innerHTML = '<strong>Your state: ' + opt.textContent + '</strong><p>Christopher is licensed in Nevada, Texas, and Florida, and he\u2019ll still walk you through your options on a call. The planner itself \u2014 the costs, the wishes, the documents \u2014 is helpful in every state.</p><p><a href="tel:+17023474536" target="_blank" rel="noopener"><strong>Call 702-347-4536</strong></a></p>';
-            }
-          });
-        }
-
-        /* Step 1 — Family Protection Score */
-        var score = 0;
-        function renderScore() {
-          var missing = [];
-          score = 0;
-          document.querySelectorAll('.pa-check').forEach(function (b) {
-            var on = b.getAttribute('aria-pressed') === 'true';
-            b.querySelector('.box').textContent = on ? '\u2713' : '';
-            if (on) score += parseInt(b.getAttribute('data-pts'), 10);
-            else missing.push(b.getAttribute('data-label'));
-          });
-          $('paScore').textContent = score;
-          $('paScoreBar').style.width = score + '%';
-          $('pa-s-score').textContent = score;
-          $('paScoreBadge').classList.toggle('show', score === 100);
-          $('paScoreBelow').style.display = score === 100 ? 'none' : '';
-          $('paScoreMissing').innerHTML = missing.map(function (m) { return '<li>' + m + '</li>'; }).join('');
-        }
-        document.querySelectorAll('.pa-check').forEach(function (b) {
-          b.addEventListener('click', function () {
-            b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
-            renderScore();
-          });
-        });
-        renderScore();
-
-        /* Step 2 — calculator, legacy, waiting, younger families */
-        var mode = 'burial';
-        var BURIAL_IDS = ['pa-f-casket', 'pa-f-plot', 'pa-f-vault', 'pa-f-stone', 'pa-f-open'];
-        var CREM_IDS = ['pa-f-cremfee', 'pa-f-urn'];
-        var ALWAYS_IDS = ['pa-f-services', 'pa-f-flowers', 'pa-f-medical', 'pa-f-debts', 'pa-f-cushion'];
-        function finalExpenses() {
-          var ids = ALWAYS_IDS.concat(mode === 'burial' ? BURIAL_IDS : CREM_IDS);
-          return ids.reduce(function (s, id) { return s + num(id); }, 0);
-        }
-        function legacyTotal() {
-          var spouse = num('pa-l-monthly') * 12 * (parseInt($('pa-l-years').value, 10) || 0);
-          $('pa-l-spouse-sub').textContent = money(spouse);
-          $('pa-l-years-val').textContent = $('pa-l-years').value + (parseInt($('pa-l-years').value, 10) === 1 ? ' year' : ' years');
-          var total = spouse + num('pa-l-kids') + num('pa-l-charity');
-          $('pa-l-total').textContent = money(total);
-          return total;
-        }
-        function renderCalc() {
-          var fin = finalExpenses(), leg = legacyTotal();
-          var total = fin + leg, have = num('pa-f-insurance') + num('pa-f-savings');
-          var gap = Math.max(0, total - have);
-          $('pa-r-final').textContent = money(fin);
-          $('pa-r-legacy').textContent = money(leg);
-          $('pa-r-total').textContent = money(total);
-          $('pa-r-have').textContent = money(have);
-          $('pa-r-gap').textContent = money(gap);
-          $('pa-r-covered').hidden = gap !== 0;
-          $('pa-s-total').textContent = money(total);
-          $('pa-s-have').textContent = money(have);
-          $('pa-s-gap').textContent = money(gap);
-          renderWait(fin);
-        }
-        function setMode(m) {
-          mode = m;
-          $('paBtnBurial').setAttribute('aria-pressed', m === 'burial' ? 'true' : 'false');
-          $('paBtnCremation').setAttribute('aria-pressed', m === 'cremation' ? 'true' : 'false');
-          document.querySelectorAll('.pa-burial-only').forEach(function (r) { r.hidden = m !== 'burial'; });
-          document.querySelectorAll('.pa-cremation-only').forEach(function (r) { r.hidden = m !== 'cremation'; });
-          renderCalc();
-        }
-        $('paBtnBurial').addEventListener('click', function () { setMode('burial'); });
-        $('paBtnCremation').addEventListener('click', function () { setMode('cremation'); });
-        ['paCalcRows', 'paLegacyBody'].forEach(function (id) {
-          $(id).addEventListener('input', renderCalc);
-        });
-        $('pa-f-insurance').addEventListener('input', renderCalc);
-        $('pa-f-savings').addEventListener('input', renderCalc);
-
-        function renderWait(fin) {
-          fin = typeof fin === 'number' ? fin : finalExpenses();
-          var today = Math.min(90, Math.max(30, parseInt($('pa-w-age').value, 10) || 62));
-          var future = parseInt($('pa-w-slider').value, 10) || 75;
-          if (future < today) future = today;
-          var years = future - today;
-          var cost = fin * Math.pow(1.03, years);
-          $('pa-w-sliderVal').textContent = future;
-          $('pa-w-todayLbl').textContent = today;
-          $('pa-w-futureLbl').textContent = future;
-          $('pa-w-yearsLbl').textContent = years + (years === 1 ? ' year later' : ' years later');
-          $('pa-w-today').textContent = money(fin);
-          $('pa-w-future').textContent = money(cost);
-          $('pa-w-barToday').style.width = (cost > 0 ? Math.min(100, fin / cost * 100) : 100) + '%';
-          $('pa-w-barFuture').style.width = '100%';
-          $('pa-w-diff').textContent = years === 0
-            ? 'Same age \u2014 no growth yet. Move the slider to a later age to see the cost of waiting.'
-            : 'That\u2019s ' + money(cost - fin) + ' more for the exact same funeral \u2014 the small cost of waiting.';
-        }
-        $('pa-w-age').addEventListener('input', renderCalc);
-        $('pa-w-slider').addEventListener('input', renderCalc);
-
-        function renderYoung() {
-          var target = num('pa-y-mortgage') + num('pa-y-income') * (parseInt($('pa-y-years').value, 10) || 0) + num('pa-y-debts');
-          var have = num('pa-y-have');
-          var gap = Math.max(0, target - have);
-          $('pa-y-target').textContent = money(target);
-          $('pa-y-haveout').textContent = money(have);
-          $('pa-y-gap').textContent = money(gap);
-          $('pa-y-covered').hidden = !(gap === 0 && target > 0);
-        }
-        $('paYoungBody').addEventListener('input', renderYoung);
-        $('paYoungBody').addEventListener('change', renderYoung);
-        renderYoung();
-        renderCalc();
-
-        /* Step 3 — policy checkup flags */
-        function renderCheckup() {
-          var flags = [];
-          var type = $('pa-pc-type').value, graded = $('pa-pc-graded').value, reviewed = $('pa-pc-reviewed').value;
-          var amount = num('pa-pc-amount');
-          var changes = [];
-          document.querySelectorAll('#paPcChips button[aria-pressed="true"]').forEach(function (b) { changes.push(b.textContent.trim()); });
-          if (type === 'term') flags.push(['This may be term coverage', 'Term coverage ends after a set number of years. If it expires before it\u2019s needed, there is nothing to claim \u2014 worth confirming when yours ends.']);
-          if (type === 'unknown') flags.push(['You don\u2019t know what kind it is', 'That\u2019s common \u2014 and it matters. A free review reads the policy with you, line by line.']);
-          if (graded === 'graded') flags.push(['Your plan is graded', 'A graded plan pays only part during its waiting period, usually the first two years. Make sure your family knows that.']);
-          if (graded === 'unknown') flags.push(['You don\u2019t know if it\u2019s graded or level', 'Level pays the full amount from day one; graded doesn\u2019t. This is one of the first things a review checks.']);
-          if (amount > 0 && amount < finalExpenses()) flags.push(['The amount may no longer cover the cost', 'Your Step 2 total is ' + money(finalExpenses()) + ' \u2014 more than the ' + money(amount) + ' on this policy.']);
-          if (changes.length) flags.push(['Life has changed since you bought it', 'You marked: ' + changes.join(', ') + '. Changes like these are exactly when beneficiaries need a second look \u2014 the person named on the policy is who gets paid.']);
-          if (reviewed === 'never') flags.push(['It has never been reviewed', 'A policy that\u2019s never been re-read can quietly stop matching your life. Reviews are free.']);
-          if (reviewed === 'over3') flags.push(['It\u2019s been over 3 years since a review', 'Costs, family, and policies all change in 3 years \u2014 worth a fresh look.']);
-          var box = $('paPcFlags');
-          if (!type && !graded && !reviewed && !amount && !changes.length) {
-            box.innerHTML = '<p class="pa-ok">Answer the questions above and your flags will appear here \u2014 the things worth a second look.</p>';
-          } else if (!flags.length) {
-            box.innerHTML = '<p class="pa-ok">Nothing flagged from what you\u2019ve answered \u2014 that\u2019s a good sign. A free review still confirms it in about 10 minutes.</p>';
-          } else {
-            box.innerHTML = flags.map(function (f) { return '<div class="pa-flag"><strong>' + f[0] + '</strong>' + f[1] + '</div>'; }).join('');
-          }
-        }
-        document.querySelectorAll('#paPcChips button').forEach(function (b) {
-          b.addEventListener('click', function () {
-            b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
-            renderCheckup();
-          });
-        });
-        ['pa-pc-type', 'pa-pc-graded', 'pa-pc-reviewed'].forEach(function (id) { $(id).addEventListener('change', renderCheckup); });
-        $('pa-pc-amount').addEventListener('input', renderCheckup);
-
-        /* Myth-or-Fact quiz — the planner's five questions */
-        var PARTA = [
-          { q: 'When someone dies, how soon can their family usually use the money in the person\u2019s bank account to pay for the funeral?', opts: ['It can be frozen during probate, so it may not be reachable in the first days', 'Right away \u2014 the bank releases it for funeral bills', 'Only the funeral home is allowed to withdraw it'], correct: 0, lesson: 'Bank accounts can be frozen during probate, so the money may not be reachable in the first days \u2014 exactly when the funeral bill comes due.' },
-          { q: 'How much is Social Security\u2019s lump-sum death payment?', opts: ['It covers most of a typical funeral', 'About $2,500', '$255'], correct: 2, lesson: 'Social Security\u2019s lump-sum death payment is $255 \u2014 it has not kept up with real funeral costs.' },
-          { q: 'When do funeral homes usually need to be paid?', opts: ['Six months after the service', 'When arrangements are made', 'Only after the estate is settled'], correct: 1, lesson: 'Payment is generally due when arrangements are made, before the service takes place.' },
-          { q: 'You\u2019re young and healthy. What does waiting to get coverage usually cost you?', opts: ['Nothing \u2014 the price stays the same at any age', 'Nothing, because healthy people always qualify later', 'More money later, or qualifying for less \u2014 pricing is based on age and health'], correct: 2, lesson: 'Pricing is based on age and health \u2014 waiting means paying more, or qualifying for less.' },
-          { q: 'How does life insurance pay your family?', opts: ['Directly to the beneficiary you named, usually within days of a claim, without court', 'Through the courts, after probate finishes', 'Only to the funeral home, never to family'], correct: 0, lesson: 'Benefits go straight to the beneficiary you named, outside of probate \u2014 which is why families count on it for these costs.' }
-        ];
-        var qi = 0, qAnswered = false, qCorrect = 0;
-        var LETTERS = ['A', 'B', 'C'];
-        function showQuizQ() {
-          qAnswered = false;
-          $('paQuizDone').hidden = true;
-          $('paQuizStep').textContent = 'Question ' + (qi + 1) + ' of 5';
-          $('paQuizBar').style.width = (qi / 5 * 100) + '%';
-          $('paQuizQ').textContent = PARTA[qi].q;
-          var lesson = $('paQuizLesson'); lesson.className = 'pa-lesson'; lesson.textContent = '';
-          $('paQuizNext').hidden = true;
-          var box = $('paQuizAnswers'); box.innerHTML = '';
-          PARTA[qi].opts.forEach(function (text, idx) {
-            var b = document.createElement('button');
-            b.type = 'button'; b.className = 'pa-opt-btn';
-            var l = document.createElement('span'); l.className = 'pa-opt-letter'; l.textContent = LETTERS[idx];
-            var t = document.createElement('span'); t.textContent = text;
-            b.appendChild(l); b.appendChild(t);
-            b.addEventListener('click', function () { answerQuiz(idx, b); });
-            box.appendChild(b);
-          });
-        }
-        function answerQuiz(idx, btn) {
-          if (qAnswered) return;
-          qAnswered = true;
-          var item = PARTA[qi];
-          var btns = $('paQuizAnswers').querySelectorAll('.pa-opt-btn');
-          btns[item.correct].classList.add('correct');
-          if (idx === item.correct) { qCorrect++; }
-          else { btn.classList.add('wrong'); }
-          var lesson = $('paQuizLesson');
-          lesson.textContent = (idx === item.correct ? 'Right. ' : 'Not quite. ') + item.lesson;
-          lesson.classList.add('show');
-          $('paQuizBar').style.width = ((qi + 1) / 5 * 100) + '%';
-          var next = $('paQuizNext');
-          next.textContent = qi === PARTA.length - 1 ? 'See my score \u2192' : 'Next \u2192';
-          next.hidden = false;
-        }
-        $('paQuizNext').addEventListener('click', function () {
-          if (qi < PARTA.length - 1) { qi++; showQuizQ(); }
-          else {
-            $('paQuizStep').textContent = 'Your Myth-or-Fact score';
-            $('paQuizQ').textContent = qCorrect + ' of 5 \u2014 ' + (qCorrect === 5 ? 'you think like a planner already.' : qCorrect >= 3 ? 'a strong start, and if a few surprised you, you\u2019re not alone.' : 'no shame in this score \u2014 most families believe these same myths. Confused is fixable.');
-            $('paQuizAnswers').innerHTML = '';
-            var lesson = $('paQuizLesson'); lesson.className = 'pa-lesson'; lesson.textContent = '';
-            $('paQuizNext').hidden = true;
-            $('paQuizDone').hidden = false;
-          }
-        });
-        showQuizQ();
-
-        /* Referral Game meter */
-        var refWrap = $('paRefChips');
-        var refCount = 0;
-        if (refWrap) {
-          for (var i = 1; i <= 10; i++) {
-            (function (n) {
-              var b = document.createElement('button');
-              b.type = 'button'; b.textContent = n + (n === 1 ? ' referral' : ' referrals');
-              b.setAttribute('aria-pressed', 'false');
-              b.addEventListener('click', function () {
-                refCount = (refCount === n) ? 0 : n;
-                refWrap.querySelectorAll('button').forEach(function (x, xi) { x.setAttribute('aria-pressed', xi + 1 === refCount ? 'true' : 'false'); });
-                $('paRefAmt').textContent = money(refCount * 500);
-                $('paRefBar').style.width = (refCount * 10) + '%';
-              });
-              refWrap.appendChild(b);
-            })(i);
-          }
-        }
-
-        /* One Thing Today — rotates daily */
-        var TODAY = [
-          'Write one memory you want shared.',
-          'Tell one person where your important papers are kept.',
-          'Write down the first person your family should call.',
-          'Pick one song you want played at your service.',
-          'Check that your beneficiaries are still the right people.'
-        ];
-        var dayIdx = Math.floor(Date.now() / 86400000) % TODAY.length;
-        $('paTodayAction').textContent = TODAY[dayIdx];
-      })();
-    </script>
-  </body>
+      
+  
+  <div class="sticky-callbar" role="navigation" aria-label="Call Christopher">
+    <a class="cb-call" href="tel:+17023474536">Call (702) 347-4536</a>
+    <a class="cb-book" href="https://planner.sglifeinsurance.com">Book a phone call</a>
+  </div>
+</body>
 </html>
+          <p style="margin-top:22px">Email: <a href="mailto:cmspruell@sglifeinsurance.com">cmspruell@sglifeinsurance.com</a> · <a href="https://planner.sglifeinsurance.com">Book a phone call</a> · <a href="https://reviews.sglifeinsurance.com">Leave a Google review</a></p>
+          <p>Licensed agents: <a href="https://www.theslsway.com/cspruell" target="_blank" rel="noopener">join the team →</a></p>
+        

@@ -1,0 +1,14 @@
+# robots.txt for sglifeinsurance.com
+# All crawlers welcome, including AI search crawlers.
+
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
