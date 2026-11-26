@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
+
+Sitemap: https://www.sglifeinsurance.com/sitemap.xml
