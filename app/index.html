@@ -60,6 +60,12 @@ header .motto{color:var(--gold-l); font-style:italic; font-family:"Newsreader", 
 .muted{color:var(--ink-soft);}
 .small{font-size:.88rem;}
 .big-number{font-family:"Newsreader", Georgia, serif; font-size:2rem; font-weight:700; color:var(--navy);}
+.capture-big{font-family:"Newsreader", Georgia, serif; font-size:3.2rem; font-weight:700; line-height:1.05; color:var(--gold); margin:2px 0 8px;}
+.capture-trust{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18); border-radius:10px; padding:12px 14px; margin:0 0 16px;}
+.capture-trust p{margin:0;}
+.capture-email{margin-top:18px; border-top:1px solid rgba(255,255,255,.18); padding-top:16px;}
+.capture-email label{display:block; font-weight:700; margin:10px 0 4px; color:#e8eef2;}
+.capture-email input{width:100%; box-sizing:border-box; padding:12px; border:1px solid #b9c6cf; border-radius:10px; font-size:1rem;}
 
 /* Buttons */
 .btn{
@@ -260,11 +266,28 @@ nav.tabbar button.active{color:var(--gold-l);}
       <p class="small muted" style="margin-bottom:0;">Printing uses your phone&rsquo;s own print sheet &mdash; choose &ldquo;Save as PDF&rdquo; there if you&rsquo;d rather keep a file.</p>
     </div>
 
-    <div class="card card-navy">
+    <div class="card card-navy" id="captureMoment">
+      <p class="kicker" style="color:#d9b45f;">Your number</p>
+      <div class="capture-big" id="doneTotal">$16,800</div>
+      <p style="margin-top:0;">That&rsquo;s your number to plan around &mdash; the figure you set in Step 1, inside the Las Vegas all-in range of $13,000 &ndash; $18,000. Your own line-by-line total came to <strong id="doneCost">$0</strong>.</p>
+      <p style="margin-top:0;">You already have <strong id="doneHave">$0</strong> in place &mdash; so right now, about <strong id="doneGap">$16,800</strong> would come out of your family&rsquo;s pocket in the first week or two.</p>
+      <div class="capture-trust">
+        <p><strong>This isn&rsquo;t a quote.</strong> That number is a planning estimate, built from what you put into this planner &mdash; it isn&rsquo;t an insurance quote, and it isn&rsquo;t coverage. Prices vary by funeral home, and what a plan would cost you depends on your age and the options you qualify for. The only way to get a real number is a short phone call.</p>
+      </div>
       <h3 style="font-size:1.3rem; margin-bottom:8px;">Your one next step</h3>
       <p style="margin-top:0;">A short phone call with me &mdash; about ten minutes &mdash; and I&rsquo;ll check your numbers against real policies, with no pressure either way. Phone only, at a time that suits you.</p>
-      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call</a>
-      <p class="small" style="color:#b9c6cf; margin-bottom:0;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">702-347-4536</a> &mdash; I answer my own phone.</p>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScct-I3YePbHJUmll-o5JmgwcuPQT-CVMdAyZC4vqdX9B3UUg/viewform" target="_blank" rel="noopener">Book a phone call &mdash; let&rsquo;s walk through your number together</a>
+      <p class="small" style="color:#b9c6cf;">Rather just call? <a href="tel:+17023474536" style="color:#d9b45f;">(702) 347-4536</a> &mdash; I answer my own phone.</p>
+      <div class="capture-email">
+        <h3 style="font-size:1.2rem; margin-bottom:6px;">Optional &mdash; want a copy of your numbers?</h3>
+        <p style="margin-top:0;">I&rsquo;ll email you the breakdown &mdash; your total, what you already have, and the gap &mdash; so you can look it over or show your family. Your plan above stays right here on your device either way, and the planner stays free whether you do this or not.</p>
+        <label for="bdName">Your name</label>
+        <input type="text" id="bdName" autocomplete="name" placeholder="Your name">
+        <label for="bdEmail">Your email</label>
+        <input type="email" id="bdEmail" autocomplete="email" placeholder="you@example.com">
+        <a class="btn btn-navy" id="bdSend" href="https://docs.google.com/forms/d/e/1FAIpQLSdz2V0_j5MjTgHskc0z3ymIPfHT0z2wiznFQL4RE9QGvUzv1w/viewform" target="_blank" rel="noopener" style="margin-top:14px;">Email me my breakdown</a>
+        <p class="small" style="color:#b9c6cf; margin-bottom:0;">Tap the button and a short form opens in a new tab &mdash; your name and email are all it asks, plus your number if you want to add it. I&rsquo;ll email your breakdown and the free planner. No spam, and I won&rsquo;t call unless you book a call or ask me to.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -655,6 +678,10 @@ function summaryRows(){
 function buildSummary(){
   document.getElementById("summaryList").innerHTML =
     summaryRows().map(function(r){ return '<li><span class="k">'+esc(r[0])+'</span><span class="v">'+esc(r[1])+'</span></li>'; }).join("");
+  var dt = document.getElementById("doneTotal"); if (dt) dt.textContent = money(S.planFigure);
+  var dc = document.getElementById("doneCost"); if (dc) dc.textContent = money(costTotal());
+  var dh = document.getElementById("doneHave"); if (dh) dh.textContent = money(haveTotal());
+  var dg = document.getElementById("doneGap"); if (dg) dg.textContent = money(gap());
   document.getElementById("doneShelf").innerHTML = productCard(FEATURED, FEATURED.btn) + productCard(LEGACY);
   /* Print sheet */
   var rows = summaryRows().map(function(r){ return '<tr><td class="k">'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'; }).join("");
@@ -667,6 +694,10 @@ function buildSummary(){
     '<p style="margin-top:24px; color:#444;">Keep this sheet where your family will find it, and tell one person where it is. Sometimes tomorrow never comes.</p>';
 }
 document.getElementById("printBtn").addEventListener("click", function(){ buildSummary(); window.print(); });
+var bdSend = document.getElementById("bdSend");
+if (bdSend) bdSend.addEventListener("click", function(){
+  try { localStorage.setItem("st-breakdown-ask", JSON.stringify({ name:(document.getElementById("bdName")||{}).value||"", email:(document.getElementById("bdEmail")||{}).value||"", planFigure:S.planFigure, cost:costTotal(), have:haveTotal(), gap:gap(), when:new Date().toISOString() })); } catch(e){}
+});
 document.getElementById("startOverBtn").addEventListener("click", function(){
   S = blankState(); save(); show("home"); refreshHome();
 });
