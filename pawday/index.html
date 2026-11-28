@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawDay — Never Miss Your Pet's Birthday Again</title>
+<meta name="description" content="Join PawDay once, and every year on your pet's birthday a personalized birthday video lands in your inbox. Free, forever.">
+<style>
+  :root{
+    --cream:#FFF8F0;
+    --ink:#3B2A20;
+    --accent:#E8622C;
+    --accent-dark:#C94F21;
+    --gold:#F4A93B;
+    --card:#FFFFFF;
+    --soft:#FFE9D6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
+  header{padding:22px 0 6px;text-align:center;}
+  .logo{font-size:30px;font-weight:800;letter-spacing:-0.5px;}
+  .logo span{color:var(--accent);}
+  .hero{text-align:center;padding:28px 0 10px;}
+  .hero .big-emoji{font-size:76px;line-height:1.1;}
+  .hero h1{font-size:40px;line-height:1.15;font-weight:800;letter-spacing:-1px;margin:14px 0 14px;}
+  .hero p{font-size:19px;color:#5c4636;max-width:540px;margin:0 auto;}
+  .cta{display:block;margin:30px auto 8px;max-width:420px;background:var(--accent);color:#fff;
+    font-size:20px;font-weight:700;text-align:center;text-decoration:none;
+    padding:17px 24px;border-radius:999px;box-shadow:0 6px 18px rgba(232,98,44,.35);}
+  .cta:active{background:var(--accent-dark);}
+  .cta-note{text-align:center;font-size:14px;color:#8a715c;margin-bottom:8px;}
+  section{padding:30px 0 6px;}
+  h2{font-size:27px;font-weight:800;letter-spacing:-0.5px;text-align:center;margin-bottom:20px;}
+  .steps{display:flex;flex-direction:column;gap:14px;}
+  .step{background:var(--card);border-radius:18px;padding:20px 20px 18px;display:flex;gap:16px;
+    box-shadow:0 2px 10px rgba(59,42,32,.06);}
+  .step .num{flex:0 0 46px;height:46px;border-radius:50%;background:var(--soft);
+    display:flex;align-items:center;justify-content:center;font-size:24px;}
+  .step h3{font-size:19px;margin-bottom:3px;}
+  .step p{font-size:16px;color:#5c4636;}
+  .tiers{display:flex;flex-direction:column;gap:14px;}
+  .tier{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 2px 10px rgba(59,42,32,.06);}
+  .tier.free{border:3px solid var(--gold);}
+  .tier .tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+    background:var(--soft);color:var(--accent-dark);border-radius:999px;padding:4px 12px;margin-bottom:10px;}
+  .tier h3{font-size:21px;margin-bottom:6px;}
+  .tier p{font-size:16px;color:#5c4636;}
+  .tier .price{font-size:17px;font-weight:700;color:var(--ink);margin-top:8px;}
+  .bottom-cta{padding:36px 0 10px;text-align:center;}
+  .bottom-cta p{font-size:18px;color:#5c4636;max-width:480px;margin:0 auto;}
+  footer{text-align:center;padding:36px 20px 44px;font-size:14px;color:#8a715c;}
+  footer .paws{font-size:18px;margin-bottom:8px;}
+  @media (min-width:560px){
+    .hero h1{font-size:48px;}
+    .tiers{flex-direction:row;}
+    .tier{flex:1;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">🐾 Paw<span>Day</span></div>
+  </header>
+
+  <div class="hero">
+    <div class="big-emoji">🐶🎂</div>
+    <h1>Never miss your pet's birthday again.</h1>
+    <p>Join PawDay once, and every year on their big day a personalized birthday video lands in your inbox — made from your pet's photo, with their name and age. Free, forever.</p>
+    <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScLxFJx3jmx0-jZFNLsPjqAeLtCiwDPUuiqYAK1dsB5ZdDUNw/viewform">Join PawDay — it's free 🎉</a>
+    <div class="cta-note">Takes about a minute. No card, no catch.</div>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">✍️</div>
+        <div>
+          <h3>1. Tell us once</h3>
+          <p>Your pet's name, a photo, and their birthday. That's it — one little form and you're in the club.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">🗓️</div>
+        <div>
+          <h3>2. We remember</h3>
+          <p>The date lives in the club calendar, so you don't have to keep it in your head (or taped to the fridge).</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">🎬</div>
+        <div>
+          <h3>3. Their day arrives</h3>
+          <p>A birthday video made just for them is in your inbox at 7 AM. Post it and watch the comments roll in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Free today — more coming soon</h2>
+    <div class="tiers">
+      <div class="tier free">
+        <div class="tag">Free forever</div>
+        <h3>🎥 The Birthday Video</h3>
+        <p>Every year on your pet's birthday, a personalized video with their photo, their name, and their new age — delivered to your inbox at 7 AM.</p>
+        <div class="price">$0 — always</div>
+      </div>
+      <div class="tier">
+        <div class="tag">Coming soon</div>
+        <h3>🎁 The Birthday Box</h3>
+        <p>A bandana and treats with your pet's name on them, shipped to your door in time for the big day.</p>
+        <div class="price">Members get first access</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-cta">
+    <p>Your pet only gets one birthday a year. Let's make sure it never slips by again.</p>
+    <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScLxFJx3jmx0-jZFNLsPjqAeLtCiwDPUuiqYAK1dsB5ZdDUNw/viewform">Join PawDay — it's free 🐾</a>
+    <div class="cta-note">Dogs, cats, and every other good boy or girl welcome.</div>
+  </div>
+
+  <footer>
+    <div class="paws">🐾 🐾 🐾</div>
+    PawDay — a little birthday club for the pets who run our homes.<br>
+    Made in Las Vegas.
+  </footer>
+
+</div>
+</body>
+</html>
